@@ -31,7 +31,8 @@ import { mdiInformationBoxOutline } from '@mdi/js';
 const markdown = marked(`
 # PtN 素材計算機
 本サイトで引用されている『無期迷途』内の文章・画像等の著作権はZIYI GROUP HK LIMITED又は権利を有する第三者に帰属します。
-また、権利者様側からの画像等の削除の依頼や警告は速やかに対処いたします。
+また、権利者様側からの画像等の削除の依頼や警告は速やかに対処いたします。\n
+[GitHub](https://github.com/AureaAurum/PtN_tool_code)
 
 ## 使い方
 検索欄からコンビクトを選択すると素材の必要数が計算されます。選択後のキャラをクリックするとランクアップや各スキルレベルの目標を設定できます。\n
