@@ -10,14 +10,14 @@ jobs:
         with:
           repository: AureaAurum/PtN_tool
           depth: 1
-          path: ptn-tool/* copy
+          path: ptn-tool
           token: ${{ secrets.ACCESS_TOKEN }}
           sparse-checkout: |
             !public/*
             /*
           sparse-checkout-cone-mode: false # required for ! entry to work
       - name: copy
-        run: cp ptn-tool copy
+        run: cp ptn-tool/* copy
       - name: Clean ptn-tool
         run: rm -rf ptn-tool
       # プルリク作成
