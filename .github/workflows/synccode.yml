@@ -10,19 +10,24 @@ jobs:
         with:
           repository: AureaAurum/PtN_tool
           depth: 1
-          path: ./ptn-tool
+          path: ptn-tool/* copy
           token: ${{ secrets.ACCESS_TOKEN }}
           sparse-checkout: |
             !public/*
             /*
           sparse-checkout-cone-mode: false # required for ! entry to work
-      - name: create PR
+      - name: copy
+        run: cp ptn-tool
+      - name: Clean ptn-tool
+        run: rm -rf ptn-tool
+      # プルリク作成
+      - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-            token: ${{ secrets.GITHUB_ACCESS_TOKEN }}
-            author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-            commit-message: 'copy test'
-            branch: copy_target
-            branch-suffix: timestamp
-            delete-branch: true
-            title: 'updated target.yml'
+          token: ${{ secrets.ACCESS_TOKEN }}
+          commit-message: 'Update Assets'
+          branch: feature/asset-files-changes
+          base: master
+          # 同一ブランチ名にならないよう後ろにタイムスタンプを付加
+          branch-suffix: timestamp
+          delete-branch: true
