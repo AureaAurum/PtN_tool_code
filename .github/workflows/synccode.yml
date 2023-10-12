@@ -20,14 +20,14 @@ jobs:
           sparse-checkout: |
             !public/*
             !.git/*
-            !.github/
+            !.github/*
             /*
           sparse-checkout-cone-mode: false # required for ! entry to work
       - name: copy repo　
         env:
          SECRET_TOKEN: ${{ secrets.ACCESSTOKEN }}
         run: |
-           rsync -av --exclude='.git' ptn-tool/ main
+           rsync -av --exclude={'.git','.github'} ptn-tool/ main
            cd main
            pwd
            ls -la
