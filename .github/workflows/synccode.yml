@@ -20,23 +20,18 @@ jobs:
             !public/*
             /*
           sparse-checkout-cone-mode: false # required for ! entry to work
-      - run: |
-          pwd
-          ls -la
-      - name: Check the main repo
-        working-directory: main
-        run: |
-          pwd
-          ls -la
-          git remote -v
-      - name: Check the another repo
-        working-directory: ptn-tool
-        run: |
-          pwd
-          ls -la
-          git remote -v
       - name: copy repo
         run: |
            cp -RT ptn-tool main
            cd main
+           pwd
+           ls -la
            git remote -v
+           git remote set-url origin https://github.com/AureaAurum/PtN_tool_code
+           git remote -v
+           date > generated.txt
+           git config user.name github-actions
+           git config user.email github-actions@github.com
+           git add .
+           git commit -m "generated"
+           git push
