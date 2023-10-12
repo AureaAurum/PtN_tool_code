@@ -20,20 +20,6 @@ jobs:
             /*
           sparse-checkout-cone-mode: false # required for ! entry to work
       - name: copy repo　
-        env:
-         SECRET_TOKEN: ${{ secrets.ACCESSTOKEN }}
         run: |
            cp -RT ptn-tool main
-           cd main
-           pwd
-           ls -la
-           mkdir public
-           git remote -v
-           git remote add neworigin https://${GITHUB_ACTOR}:${SECRET_TOKEN}@github.com/AureaAurum/PtN_tool_code
-           git remote -v
-           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-           git config --local user.name "github-actions[bot]"
-           git rm --sparse --cached -r public
-           git clean -df
-           git commit -m "Remove and untrack file"
-           git push -f neworigin HEAD:main
+        working-directory: ${{ github.workspace }}
