@@ -6,6 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          path: main
       - uses: actions/checkout@v4
         with:
           repository: AureaAurum/PtN_tool
@@ -16,11 +20,19 @@ jobs:
             !public/*
             /*
           sparse-checkout-cone-mode: false # required for ! entry to work
-      - name: copy
-        run: cp -RT ptn-tool copy
-      - name: Clean ptn-tool
-        run: rm -rf ptn-tool
-      - uses: peter-evans/create-pull-request@v5
-        with:
-          token: ${{ secrets.ACCESS_TOKEN }}
-          push-to-fork: machine-user/fork-of-repository
+      - run: |
+          pwd
+          ls -la
+          git remote -v
+      - name: Check the main repo
+        working-directory: main
+        run: |
+          pwd
+          ls -la
+          git remote -v
+      - name: Check the another repo
+        working-directory: ptn-tool
+        run: |
+          pwd
+          ls -la
+          git remote -v
