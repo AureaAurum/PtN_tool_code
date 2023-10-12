@@ -18,6 +18,7 @@ jobs:
           sparse-checkout: |
             !public/*
             !.git/*
+            !.github/
             /*
           sparse-checkout-cone-mode: false # required for ! entry to work
       - name: copy repo　
