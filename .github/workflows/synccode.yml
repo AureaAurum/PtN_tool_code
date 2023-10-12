@@ -35,3 +35,8 @@ jobs:
           pwd
           ls -la
           git remote -v
+      - name: copy repo
+        run: |
+           cp -RT ptn-tool main
+           cd main
+           git remote -v
