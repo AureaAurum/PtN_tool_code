@@ -11,6 +11,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: Clone another repository
         env:
-          GITHUB_TOKEN: ${{ secrets.ACCESSTOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         run: |
           git clone https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/AureaAurum/PtN_tool
