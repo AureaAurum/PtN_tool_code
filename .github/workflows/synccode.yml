@@ -24,10 +24,12 @@ jobs:
         env:
          SECRET_TOKEN: ${{ secrets.ACCESSTOKEN }}
         run: |
-           cp -RT ptn-tool main
+           rsync -av --exclude='.git' ./ptn_tool/ ./main/
            cd main
            pwd
            ls -la
+           git remote -v
+           git init
            git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
            git config --local user.name "github-actions[bot]"
            git add .
