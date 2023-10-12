@@ -13,7 +13,6 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: AureaAurum/PtN_tool
-          depth: 1
           path: ptn-tool
           token: ${{ secrets.ACCESS_TOKEN }}
           sparse-checkout: |
