@@ -25,6 +25,7 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
+          path: copy
           commit-message: 'Update Assets'
           branch: feature/asset-files-changes
           base: master
