@@ -17,7 +17,7 @@ jobs:
             /*
           sparse-checkout-cone-mode: false # required for ! entry to work
       - name: copy
-        run: cp ptn-tool/* copy
+        run: cp -RT ptn-tool copy
       - name: Clean ptn-tool
         run: rm -rf ptn-tool
       # プルリク作成
