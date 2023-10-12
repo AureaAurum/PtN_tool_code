@@ -22,7 +22,7 @@ jobs:
         run: rm -rf ptn-tool
       # プルリク作成
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
           commit-message: 'Update Assets'
