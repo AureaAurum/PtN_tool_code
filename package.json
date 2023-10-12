@@ -1,0 +1,26 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@invictus.codes/nuxt-vuetify": "^0.3.0",
+    "@mdi/js": "^7.3.67",
+    "@nuxt/devtools": "latest",
+    "eslint": "^8.50.0",
+    "nuxt": "^3.7.3",
+    "sass": "^1.68.0",
+    "sass-loader": "^13.3.2"
+  },
+  "dependencies": {
+    "@pinia-plugin-persistedstate/nuxt": "^1.1.2",
+    "@pinia/nuxt": "^0.4.11",
+    "marked": "^9.1.1"
+  }
+}
