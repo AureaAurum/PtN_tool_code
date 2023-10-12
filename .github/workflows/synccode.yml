@@ -8,9 +8,24 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          path: main
       - uses: actions/checkout@v4
-      - name: Clone another repository
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        with:
+          repository: AureaAurum/PtN_tool
+          path: ptn-tool
+          token: ${{ secrets.ACCESS_TOKEN }}
+          sparse-checkout: |
+            !public/*
+            /*
+          sparse-checkout-cone-mode: false # required for ! entry to work
+      - name: copy repo
         run: |
-          git clone https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/AureaAurum/PtN_tool
+           cp -RT ptn-tool main
+           cd main
+           pwd
+           ls -la
+           git remote -v
+           git remote set-url origin https://github.com/AureaAurum/PtN_tool_code
+           git remote -v
+           git push -f origin main
