@@ -23,7 +23,6 @@ jobs:
       - run: |
           pwd
           ls -la
-          git remote -v
       - name: Check the main repo
         working-directory: main
         run: |
