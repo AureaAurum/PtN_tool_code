@@ -20,6 +20,18 @@ jobs:
             /*
           sparse-checkout-cone-mode: false # required for ! entry to work
       - name: copy repo　
+        env:
+         SECRET_TOKEN: ${{ secrets.ACCESSTOKEN }}
         run: |
            cp -RT ptn-tool main
-        working-directory: ${{ github.workspace }}
+           cd main
+           pwd
+           ls -la
+           git init
+           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+           git config --local user.name "github-actions[bot]"
+           git add .
+           git commit -m "Copy files from external repository"
+           git remote add origin https://${GITHUB_ACTOR}:${SECRET_TOKEN}@github.com/AureaAurum/PtN_tool_code
+           git branch -M main
+           git push -f origin main
