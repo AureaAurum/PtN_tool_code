@@ -30,6 +30,6 @@ jobs:
            git remote -v
            git remote add neworigin https://${GITHUB_ACTOR}:${SECRET_TOKEN}@github.com/AureaAurum/PtN_tool_code
            git remote -v
-           git rm -r public
+           git rm --cached -r public
            git clean -df
            git push neworigin HEAD:master
