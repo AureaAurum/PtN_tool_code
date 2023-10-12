@@ -20,15 +20,7 @@ jobs:
         run: cp -RT ptn-tool copy
       - name: Clean ptn-tool
         run: rm -rf ptn-tool
-      # プルリク作成
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v5
+      - uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
-          path: copy
-          commit-message: 'Update Assets'
-          branch: feature/asset-files-changes
-          base: master
-          # 同一ブランチ名にならないよう後ろにタイムスタンプを付加
-          branch-suffix: timestamp
-          delete-branch: true
+          push-to-fork: machine-user/fork-of-repository
