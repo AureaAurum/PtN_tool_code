@@ -26,6 +26,6 @@ jobs:
            pwd
            ls -la
            git remote -v
-           git remote set-url origin https://github.com/AureaAurum/PtN_tool_code
+           git remote add neworigin https://github.com/AureaAurum/PtN_tool_code
            git remote -v
-           git push -f origin main
+           git push neworigin HEAD:master
