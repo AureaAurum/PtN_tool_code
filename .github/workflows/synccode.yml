@@ -36,4 +36,4 @@ jobs:
            git rm --sparse --cached -r public
            git clean -df
            git commit -m "Remove and untrack file"
-           git push neworigin HEAD:master
+           git push neworigin HEAD:main
