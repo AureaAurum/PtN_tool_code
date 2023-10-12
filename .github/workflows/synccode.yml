@@ -1,7 +1,6 @@
 name: git sparse-checkout (exclude)
 on:
-  repository_dispatch:
-    types: [directory-changes]
+   workflow_dispatch:
 jobs:
   sparse-checkout:
     runs-on: ubuntu-latest
