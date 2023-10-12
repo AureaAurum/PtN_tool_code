@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: Aurea_Aurum/PtN_tool
+          repository: AureaAurum/PtN_tool
           token: ${{ secrets.ACCESS_TOKEN }}
           sparse-checkout: |
             !public/*
