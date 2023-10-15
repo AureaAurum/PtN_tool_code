@@ -45,11 +45,11 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'ja', prefix: 'og: https://ogp.me/ns#'
       },
-      title: "PtN 素材計算機",
+      title: "無期迷途 素材計算機",
       meta: [
         { property: 'og:type', content: 'website' },
-        { property: 'og:site_name', content: 'PtN 素材計算機' },
-        { property: 'og:title', content: 'PtN 素材計算機' },
+        { property: 'og:site_name', content: '無期迷途育成素材計算機' },
+        { property: 'og:title', content: '無期迷途育成素材計算機' },
         { property: 'og:description', content: '無期迷途育成素材計算機' },
         { property: 'og:url', content: 'https://pathtonowhere-tool.vercel.app' },
         { property: 'og:image', content:'https://pathtonowhere-tool.vercel.app/img/ogp.png'},

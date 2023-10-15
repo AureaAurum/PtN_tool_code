@@ -1,7 +1,7 @@
 <template>
   <v-app theme="dark" id="PtNtool" class="bg-grey-darken-4">
     <v-app-bar :elevation="2" color="indigo darken-4">
-      <v-app-bar-title>PtN 素材計算機</v-app-bar-title>
+      <v-app-bar-title>無期迷途 育成素材計算機</v-app-bar-title>
       <v-spacer></v-spacer>
       <ReadMe></ReadMe>
     </v-app-bar>
@@ -22,7 +22,7 @@
         </v-row>
         <v-row>
             <v-btn height="40px" width="100px" color="#000000" disabled rounded="0" class="my-2 mr-3" text="オプション"></v-btn>
-            <v-tooltip bottom text="素材の所持数や必要数をリセットします" location="bottom">
+            <v-tooltip bottom text="素材の所持数や必要数、コンビクトの選択をリセットします" location="bottom">
               <template v-slot:activator="{ props }">
                 <VBtn width="100px" height="40px" dark v-bind="props" class="bg-red-darken-2 my-2 mx-1 pa-2" @click="reset()" text="reset"></VBtn>
               </template>
@@ -220,6 +220,16 @@ watch(() => [...characters.selected], (after, before) => {
 
 async function reset() {
   await materialstore.init();
+  for (const c of characters.selected) {
+    characters.data[c.name].condition = {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+    };
+  }
   characters.selected = [];
 }
 

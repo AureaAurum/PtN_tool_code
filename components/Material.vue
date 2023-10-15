@@ -45,8 +45,9 @@ export default {
                     bcolor = "yellow";
             }
             const enough = this.mat.short <= 0 ? true:false
+            const req = this.mat.required > 0
             let opacity = 1
-            if (enough && this.mat.category != "箱") {
+            if (enough && req && this.mat.category != "箱") {
                 opacity = 0.1
             }
 

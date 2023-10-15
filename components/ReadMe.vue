@@ -29,7 +29,7 @@ import { mdiInformationBoxOutline } from '@mdi/js';
 
 
 const markdown = marked(`
-# PtN 素材計算機
+# 無期迷途 素材計算機
 本サイトで引用されている『無期迷途』内の文章・画像等の著作権はZIYI GROUP HK LIMITED又は権利を有する第三者に帰属します。\n
 また、権利者様側からの画像等の削除の依頼や警告は速やかに対処いたします。
 
