@@ -41,7 +41,7 @@ const markdown = marked(`
 
 フィルタで、各種素材の表示の有無を切り替えられます。
 
-##連絡先
+## 連絡先
 [GitHub](https://github.com/AureaAurum/PtN_tool_code) [X](https://twitter.com/Aurea_Aurum)
 
 ## 謝辞
