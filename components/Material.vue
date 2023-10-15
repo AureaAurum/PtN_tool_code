@@ -44,8 +44,13 @@ export default {
                 default:
                     bcolor = "yellow";
             }
+            const enough = this.mat.short <= 0 ? true:false
+            let opacity = 1
+            if (enough && this.mat.category != "箱") {
+                opacity = 0.1
+            }
 
-            return { '--bcolor': bcolor };
+            return { '--bcolor': bcolor, '--opacity':opacity };
         },
         name(){
             const length = this.mat.name.length
@@ -98,6 +103,7 @@ input {
     min-width: 200px;
     border-color: var(--bcolor) !important;
     border: solid 0.5px;
+    opacity: var(--opacity) !important;
 }
 .matImages{
     width: 100px;

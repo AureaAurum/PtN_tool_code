@@ -19,5 +19,6 @@ This project is inspired by [arkntools/arknights-toolbox](https://github.com/ark
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details
 
 # 更新履歴
+2023-10-15 集めきった素材は暗く表示するように<br>
 2023-10-12 リソースを除いたコードの公開<br>
 2023-10-12 Readme等の記載、軽微なバグ修正
