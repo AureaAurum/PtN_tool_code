@@ -54,7 +54,7 @@ export default defineNuxtConfig({
         { property: 'og:url', content: 'https://pathtonowhere-tool.vercel.app' },
         { property: 'og:image', content:'https://pathtonowhere-tool.vercel.app/img/ogp.png'},
         { name: 'twitter:image', content:'https://pathtonowhere-tool.vercel.app/img/ogp.png'},
-        { name: 'twitter:card', content: 'summary_large_image' }
+        { name: 'twitter:card', content: 'summary' }
       ]
     }
   }
