@@ -49,8 +49,12 @@ export default defineNuxtConfig({
       meta: [
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'PtN 素材計算機' },
-        { property: 'og:description', content: '日本版無期迷途の育成素材計算機' },
+        { property: 'og:title', content: 'PtN 素材計算機' },
+        { property: 'og:description', content: '無期迷途育成素材計算機' },
         { property: 'og:url', content: 'https://pathtonowhere-tool.vercel.app' },
+        { property: 'og:image', content:'https://pathtonowhere-tool.vercel.app/img/ogp.png'},
+        { name: 'twitter:image', content:'https://pathtonowhere-tool.vercel.app/img/ogp.png'},
+        { name: 'twitter:card', content: 'summary_large_image' }
       ]
     }
   }
