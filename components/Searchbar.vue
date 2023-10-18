@@ -22,6 +22,8 @@
 
 <script setup lang ="ts">
 import { useCharacterStore } from '@/store/characters';
+import type { Character, Characters, ChJsonData, Condition, Material } from '~/types/types';
+
 const characters = useCharacterStore();
 const items = Object.values(characters.data);
 

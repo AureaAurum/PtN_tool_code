@@ -134,7 +134,7 @@
 
 <script setup lang="ts">
 const p = defineProps<{ item: any; }>();
-
+import type { Character, Characters, ChJsonData, Condition, Material } from '~/types/types';
 import { useCharacterStore } from '@/store/characters';
 import { mdiArrowRight } from '@mdi/js';
 const characters = useCharacterStore();

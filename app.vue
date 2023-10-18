@@ -8,25 +8,31 @@
     <v-main class="text-shades-white ma-5" style="min-width: 500px !important;">
       <v-container fluid class="bg-grey-darken-3">
         <v-row>
-            <v-btn width="100px" height="40px" color="#000000" disabled rounded="0" class="my-2 mr-3" text="検索"></v-btn>
-            <Searchbar style="position: relative; top:-6px"></Searchbar>
+          <v-btn width="100px" height="40px" color="#000000" disabled rounded="0" class="my-2 mr-3" text="検索"></v-btn>
+          <Searchbar style="position: relative; top:-6px"></Searchbar>
         </v-row>
         <v-row>
-            <v-btn width="100px" height="40px" color="#000000" disabled rounded="0" class="my-2 mr-3" text="フィルタ"></v-btn>
-            <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('箱')" :class="{ 'active': isSelected('箱') }">箱</v-btn>
-            <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('モジュール')" :class="{ 'active': isSelected('モジュール') }">モジュール</v-btn>
-            <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('原素')" :class="{ 'active': isSelected('原素') }">原素</v-btn>
-            <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('コア')" :class="{ 'active': isSelected('コア') }">コア</v-btn>
-            <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('内海')" :class="{ 'active': isSelected('内海') }">内海</v-btn>
-            <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleRequiredMaterials()" :class="{ 'active': materialstore.showRequiredMaterials }">不要素材</v-btn>
+          <v-btn width="100px" height="40px" color="#000000" disabled rounded="0" class="my-2 mr-3" text="フィルタ"></v-btn>
+          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('箱')" :class="{ 'active': isSelected('箱') }">箱</v-btn>
+          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('モジュール')"
+            :class="{ 'active': isSelected('モジュール') }">モジュール</v-btn>
+          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('原素')"
+            :class="{ 'active': isSelected('原素') }">原素</v-btn>
+          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('コア')"
+            :class="{ 'active': isSelected('コア') }">コア</v-btn>
+          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('内海')"
+            :class="{ 'active': isSelected('内海') }">内海</v-btn>
+          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleRequiredMaterials()"
+            :class="{ 'active': materialstore.showRequiredMaterials }">不要素材</v-btn>
         </v-row>
         <v-row>
-            <v-btn height="40px" width="100px" color="#000000" disabled rounded="0" class="my-2 mr-3" text="オプション"></v-btn>
-            <v-tooltip bottom text="素材の所持数や必要数、コンビクトの選択をリセットします" location="bottom">
-              <template v-slot:activator="{ props }">
-                <VBtn width="100px" height="40px" dark v-bind="props" class="bg-red-darken-2 my-2 mx-1 pa-2" @click="reset()" text="reset"></VBtn>
-              </template>
-            </v-tooltip>
+          <v-btn height="40px" width="100px" color="#000000" disabled rounded="0" class="my-2 mr-3" text="オプション"></v-btn>
+          <v-tooltip bottom text="素材の所持数や必要数、コンビクトの選択をリセットします" location="bottom">
+            <template v-slot:activator="{ props }">
+              <VBtn width="100px" height="40px" dark v-bind="props" class="bg-red-darken-2 my-2 mx-1 pa-2"
+                @click="reset()" text="reset"></VBtn>
+            </template>
+          </v-tooltip>
         </v-row>
       </v-container>
       <v-container class="d-flex flex-wrap align-content-start justify-start">
@@ -40,6 +46,8 @@
 import { useCharacterStore } from '@/store/characters';
 import { useMaterialStore } from '@/store/material';
 import { useDisplay } from "vuetify";
+import type { Character, Characters, ChJsonData, Condition, Material } from '~/types/types';
+
 const display = useDisplay();
 
 
@@ -221,14 +229,17 @@ watch(() => [...characters.selected], (after, before) => {
 async function reset() {
   await materialstore.init();
   for (const c of characters.selected) {
-    characters.data[c.name].condition = {
+    if (characters.data[c.name]) {
+      characters.data[c.name].condition = {
         "level": 1,
         "ru1": "false",
         "ru2": "false",
         "ru3": "false",
         "slv": [1, 1, 1, 1],
         "target_slv": [10, 10, 10, 10]
-    };
+      };
+    }
+
   }
   characters.selected = [];
 }
@@ -244,20 +255,20 @@ const toggleCategory = (category: string) => {
     const gensos = ["エンデュア原素", "フューリー原素", "アンブラ原素", "レチクル原素", "アーケイン原素", "カタリシス原素"];
     for (const genso of gensos) {
       if (materialstore.selectedCategories.includes(genso)) {
-        materialstore.selectedCategories = materialstore.selectedCategories.filter((c:string) => c !== genso);
+        materialstore.selectedCategories = materialstore.selectedCategories.filter((c: string) => c !== genso);
       } else {
         materialstore.selectedCategories.push(genso);
       }
     }
   }
   if (materialstore.selectedCategories.includes(category)) {
-    materialstore.selectedCategories = materialstore.selectedCategories.filter((c:string) => c !== category);
+    materialstore.selectedCategories = materialstore.selectedCategories.filter((c: string) => c !== category);
   } else {
     materialstore.selectedCategories.push(category);
   }
 
 
-//  console.log(materialstore.selectedCategories);
+  //  console.log(materialstore.selectedCategories);
 };
 
 const toggleRequiredMaterials = () => {
@@ -328,5 +339,4 @@ const isLastRow = (index: number) => {
 
 .left-align {
   flex-grow: 1 !important;
-}
-</style>
+}</style>

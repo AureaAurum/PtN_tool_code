@@ -1,5 +1,6 @@
 import { ref, computed } from 'vue';
 import { defineStore } from 'pinia';
+import type { Character, Characters, ChJsonData, Condition, Material } from '~/types/types';
 
 
 export const useMaterialStore = defineStore(

@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     '@pinia-plugin-persistedstate/nuxt',
   ],
   typescript: {
-    shim: false
+    shim: false,
+    typeCheck: true,
   },
   vuetify: {
     /* vuetify options */
