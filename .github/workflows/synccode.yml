@@ -26,6 +26,7 @@ jobs:
       - name: copy repo　
         env:
          SECRET_TOKEN: ${{ secrets.ACCESSTOKEN }}
+         COMMIT: ${{ github.event.client_payload.commit }}
         run: |
            rsync -av --exclude={'.git','.github'} ptn-tool/ main
            cd main
@@ -36,6 +37,6 @@ jobs:
            git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
            git config --local user.name "github-actions[bot]"
            git add .
-           git commit -m "Copy files from origin repository"
+           git commit -m "${COMMIT}"
            git remote add neworigin https://${GITHUB_ACTOR}:${SECRET_TOKEN}@github.com/AureaAurum/PtN_tool_code
            git push -f neworigin main
