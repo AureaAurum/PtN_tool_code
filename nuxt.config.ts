@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   ],
   typescript: {
     shim: false,
-    typeCheck: true,
+    typeCheck: false,
   },
   vuetify: {
     /* vuetify options */

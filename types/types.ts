@@ -7,7 +7,9 @@ export interface Material {
   owned: number;
   short: number;
 }
-
+export interface Categories {
+  [category:string] : Material[]
+}
 
 export interface Condition {
   level: number;

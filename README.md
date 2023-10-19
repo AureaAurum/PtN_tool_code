@@ -20,6 +20,7 @@ This project is inspired by [arkntools/arknights-toolbox](https://github.com/ark
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details
 
 # 更新履歴
+2023-10-19 ディスコイン対応  
 2023-10-18 翻訳追加:シャローム  
 2023-10-15 集めきった素材は暗く表示するように  
 2023-10-12 リソースを除いたコードの公開  

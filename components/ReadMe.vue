@@ -50,6 +50,7 @@ wiki\n
 This project is inspired by [arkntools/arknights-toolbox](https://github.com/arkntools/arknights-toolbox)
 
 # 更新履歴
+2023-10-19 ディスコイン対応\n
 2023-10-18 翻訳追加:シャローム\n
 2023-10-15 集めきった素材は暗く表示するように\n
 2023-10-12 Readme等の記載、軽微なバグ修正

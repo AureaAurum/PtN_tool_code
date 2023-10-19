@@ -50,20 +50,14 @@ export default {
             if (enough && req && this.mat.category != "箱") {
                 opacity = 0.1
             }
+            var fsize = this.mat.name == "ディスコイン" ? "12px" : "14px"
 
-            return { '--bcolor': bcolor, '--opacity':opacity };
+            return { '--bcolor': bcolor, '--opacity':opacity,'--fsize':fsize };
         },
         name(){
             const length = this.mat.name.length
-            let namefont;
-            if (length > 9) {
-                namefont = "8px"
-            } else {
-                namefont = "12px"
-            }
-
+            var namefont = length > 9 ? "8px": "12px"
             return{ '--namefont':namefont }
-
         },
         shortage() {
             const previousmaterials = this.prev;
@@ -92,10 +86,11 @@ export default {
 </script>
 
 <style>
-input {
-    font-size: 14px;
+.materialCard input {
+    font-size: var(--fsize) !important;
     padding-inline-end: 0px !important;
-    padding-inline-start: 0px;
+    padding-inline-start: 0px !important;
+    text-align: center !important;
 }
 
 .materialCard {
