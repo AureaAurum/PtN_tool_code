@@ -140,14 +140,6 @@ import { mdiArrowRight } from '@mdi/js';
 const characters = useCharacterStore();
 
 function remove(item: Character) {
-    characters.data[item.name].condition = {
-        "level": 1,
-        "ru1": "false",
-        "ru2": "false",
-        "ru3": "false",
-        "slv": [1, 1, 1, 1],
-        "target_slv": [10, 10, 10, 10]
-    };
     const index = characters.selected.indexOf(item);
     if (index >= 0) characters.selected.splice(index, 1);
 }

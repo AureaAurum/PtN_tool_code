@@ -66,7 +66,7 @@ let compdate = new Date(characters.refreshdate);
 console.log(`storeDate: ${compdate} \n now: ${now}`);
 if (compdate < now) {
   await characters.init();
-  await materialstore.init()
+  await materialstore.init();
   console.log("データを更新しました");
 }
 
@@ -95,8 +95,8 @@ const calcMaterial = (character: Character) => {
     return;
   }
   if (materialstore.categories["ディスコイン"][0].required == "") {
-      materialstore.categories["ディスコイン"][0].required = 0;
-      requirednum('ディスコイン');
+    materialstore.categories["ディスコイン"][0].required = 0;
+    requirednum('ディスコイン');
   }
   if (condition.ru1.toString() === "false") {
     switch (rarity) {
@@ -234,6 +234,20 @@ watch(() => [...characters.selected], (after, before) => {
       material.required = "";
     }
   }
+  if (after.length < before.length) {
+    const diff = before.filter(i => after.indexOf(i) == -1);
+    for (const d of diff) {
+      characters.data[d.name].condition = {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      };
+    }
+  }
+
 
   //console.log(after);
   for (const select of after) {
