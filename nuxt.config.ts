@@ -56,6 +56,7 @@ export default defineNuxtConfig({
         { property: 'og:image', content:'https://pathtonowhere-tool.vercel.app/img/ogp.png'},
         { name: 'twitter:image', content:'https://pathtonowhere-tool.vercel.app/img/ogp.png'},
         { name: 'twitter:card', content: 'summary' },
+        { name: 'description', content: '無期迷途の必要な育成素材を集計するツール' },
         { name:"google-site-verification", content:"1b4qYOs-FVRUExwnvCNL28aYnR3cFZgWJVvOuqL5IL8" }
       ]
     }
