@@ -9,6 +9,7 @@ export const useMaterialStore = defineStore(
     const categories:Ref<Categories> = ref({})
     const selectedCategories = ref<string[]>([]);
     const showRequiredMaterials = ref(false);
+    const hideEnoughMaterials = ref(false);
 
 
 
@@ -24,7 +25,7 @@ export const useMaterialStore = defineStore(
 
       }
 
-    return { categories,selectedCategories,showRequiredMaterials, init };
+    return { categories,selectedCategories,showRequiredMaterials,hideEnoughMaterials, init };
   },
   {
     persist: {

@@ -1,11 +1,12 @@
 export interface Material {
   id: number;
   category: string;
-  rarity: number;
+  rarity: number | string;
   name: string;
   required: any;
   owned: number;
   short: number;
+  totalRequired : number;
 }
 export interface Categories {
   [category:string] : Material[]

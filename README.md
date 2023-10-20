@@ -21,6 +21,7 @@ This project is inspired by [arkntools/arknights-toolbox](https://github.com/ark
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details
 
 # 更新履歴
+2023-10-20 収集済み素材の表示切り替えをオプション化  
 2023-10-19 ディスコイン対応 軽微なバグ修正  
 2023-10-18 翻訳追加:シャローム  
 2023-10-15 集めきった素材は暗く表示するように  

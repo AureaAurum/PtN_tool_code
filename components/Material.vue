@@ -18,11 +18,11 @@
 </template>
 
 <script>
-
 export default {
     props: {
         mat: Object, // 素材情報をプロップスとして受け取る
-        prev: Array
+        prev: Array,
+        hideEnoughMaterials: Boolean,
     },
     computed: {
         color() {
@@ -47,7 +47,7 @@ export default {
             const enough = this.mat.short <= 0 ? true:false
             const req = this.mat.required > 0
             let opacity = 1
-            if (enough && req && this.mat.category != "箱") {
+            if (enough && req && this.mat.category != "箱" && this.hideEnoughMaterials) {
                 opacity = 0.1
             }
             var fsize = this.mat.name == "ディスコイン" ? "12px" : "14px"

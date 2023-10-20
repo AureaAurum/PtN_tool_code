@@ -35,11 +35,12 @@
                 @click="reset()" text="reset"></VBtn>
             </template>
           </v-tooltip>
+          <v-switch color="indigo-accent-2" v-model="materialstore.hideEnoughMaterials" hide-details class="my-0 mx-5 pa-0" label="収集済み素材を半透明に"></v-switch>
         </v-row>
       </v-container>
       <v-container class="d-flex flex-wrap align-content-start justify-start">
         <Material class="ma-2" style="max-width: 200px;" v-for=" (material, index) in filteredMaterials"
-          :class="{ 'left-align': isLastRow(index) }" :mat="material" :prev="prevMaterials(material)"></Material>
+          :class="{ 'left-align': isLastRow(index) }" :mat="material" :prev="prevMaterials(material)" :hideEnoughMaterials="materialstore.hideEnoughMaterials"></Material>
       </v-container>
     </v-main>
   </v-app>
