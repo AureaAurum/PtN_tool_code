@@ -320,7 +320,7 @@ const filteredMaterials = computed(() => {
     materials = materialList.filter((material: Material) => !materialstore.selectedCategories.includes(material.category));
   }
   if (materialstore.showRequiredMaterials) {
-    materials = materials.filter((material: Material) => material.required >= 1 || material.category == "箱");
+    materials = materials.filter((material: Material) => Number(material.required) >= 1 || material.category == "箱");
   }
   return materials;
 

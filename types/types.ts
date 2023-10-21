@@ -3,7 +3,7 @@ export interface Material {
   category: string;
   rarity: number | string;
   name: string;
-  required: any;
+  required: number | string;
   owned: number;
   short: number;
   totalRequired : number;

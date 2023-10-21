@@ -17,72 +17,75 @@
     </v-card>
 </template>
 
-<script>
-export default {
-    props: {
-        mat: Object, // 素材情報をプロップスとして受け取る
-        prev: Array,
-        hideEnoughMaterials: Boolean,
-    },
-    computed: {
-        color() {
-            const rarity = this.mat.rarity;
-            let bcolor;
-            switch (rarity) {
-                case '1':
-                    bcolor = "white";
-                    break;
-                case '2':
-                    bcolor = "green";
-                    break;
-                case '3':
-                    bcolor = "blue";
-                    break;
-                case '4':
-                    bcolor = "purple";
-                    break;
-                default:
-                    bcolor = "yellow";
-            }
-            const enough = this.mat.short <= 0 ? true:false
-            const req = this.mat.required > 0
-            let opacity = 1
-            if (enough && req && this.mat.category != "箱" && this.hideEnoughMaterials) {
-                opacity = 0.1
-            }
-            var fsize = this.mat.name == "ディスコイン" ? "12px" : "14px"
+<script setup lang="ts">
+import { ref, computed } from 'vue';
+import { useMaterialStore } from '@/store/material';
+import type { Categories, Material } from '@/types/types'
 
-            return { '--bcolor': bcolor, '--opacity':opacity,'--fsize':fsize };
-        },
-        name(){
-            const length = this.mat.name.length
-            var namefont = length > 9 ? "8px": "12px"
-            return{ '--namefont':namefont }
-        },
-        shortage() {
-            const previousmaterials = this.prev;
-            const owned = this.mat.owned;
-            const required = Number(this.mat.required);
-            this.mat.totalRequired = required;
-            let shortage = 0;
-            if (this.prev.length > 0) {
-                const prevMaterial = previousmaterials[0];
-                const prevShortage = typeof prevMaterial.short == "number" ? prevMaterial.short : 0;
-                if (prevShortage > 0 && typeof prevMaterial.short == "number" && prevMaterial.category != "内海") {
-                    const conversionRate = 3; // iを使用して正しい指数を計算
-                    const convertedShortage = prevShortage * conversionRate;
+const materialstore = useMaterialStore();
 
-                    this.mat.totalRequired += convertedShortage;
-                }
-            }
+const props = defineProps<{
+  mat: Material, // 素材情報をプロップスとして受け取る
+  prev: Material[],
+  hideEnoughMaterials: Boolean,
+}>()
 
+const color = computed(() => {
+  const rarity = props.mat.rarity;
+  let bcolor;
+  switch (rarity) {
+    case '1':
+      bcolor = "white";
+      break;
+    case '2':
+      bcolor = "green";
+      break;
+    case '3':
+      bcolor = "blue";
+      break;
+    case '4':
+      bcolor = "purple";
+      break;
+    default:
+      bcolor = "yellow";
+  }
+  const enough = props.mat.short <= 0 ? true : false;
+  const req = Number(props.mat.required) > 0;
+  let opacity = 1;
+  if (enough && req && props.mat.category != "箱" && props.hideEnoughMaterials) {
+    opacity = 0.1;
+  }
+  var fsize = props.mat.name == "ディスコイン" ? "12px" : "14px";
 
-            shortage += this.mat.totalRequired - owned; // 不足分を計算
-            this.mat.short = shortage;
-            return shortage;
-        }
-    },
-};
+  return { '--bcolor': bcolor, '--opacity': opacity, '--fsize': fsize };
+});
+
+const name = computed(() => {
+  const length = props.mat.name.length;
+  var namefont = length > 9 ? "8px" : "12px";
+  return { '--namefont': namefont };
+});
+
+const shortage = computed(() => {
+  const previousmaterials = props.prev;
+  const owned = props.mat.owned;
+  const required = Number(props.mat.required);
+  props.mat.totalRequired = required;
+  let shortage = 0;
+  if (props.prev.length > 0) {
+    const prevMaterial = previousmaterials[0];
+    const prevShortage = typeof prevMaterial.short == "number" ? prevMaterial.short : 0;
+    if (prevShortage > 0 && typeof prevMaterial.short == "number" && prevMaterial.category != "内海") {
+      const conversionRate = 3;
+      const convertedShortage = prevShortage * conversionRate;
+
+      props.mat.totalRequired += convertedShortage;
+    }
+  }
+  shortage += props.mat.totalRequired - owned; // 不足分を計算
+  props.mat.short = shortage;
+  return shortage;
+});
 </script>
 
 <style>
