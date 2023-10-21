@@ -51,7 +51,7 @@ wiki\n
 This project is inspired by [arkntools/arknights-toolbox](https://github.com/arkntools/arknights-toolbox)
 
 # 更新履歴
-2023-10-21 翻訳追加:コクリコ\n
+2023-10-21 翻訳追加:コクリコ, クリスティナ\n
 2023-10-20 収集済み素材の表示切り替えをオプション化\n
 2023-10-19 ディスコイン対応 軽微なバグ修正\n
 2023-10-18 翻訳追加:シャローム\n
