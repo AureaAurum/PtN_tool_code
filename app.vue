@@ -35,12 +35,14 @@
                 @click="reset()" text="reset"></VBtn>
             </template>
           </v-tooltip>
-          <v-switch color="indigo-accent-2" v-model="materialstore.hideEnoughMaterials" hide-details class="my-0 mx-5 pa-0" label="収集済み素材を半透明に"></v-switch>
+          <v-switch color="indigo-accent-2" v-model="materialstore.hideEnoughMaterials" hide-details
+            class="my-0 mx-5 pa-0" label="収集済み素材を半透明に"></v-switch>
         </v-row>
       </v-container>
       <v-container class="d-flex flex-wrap align-content-start justify-start">
         <Material class="ma-2" style="max-width: 200px;" v-for=" (material, index) in filteredMaterials"
-          :class="{ 'left-align': isLastRow(index) }" :mat="material" :prev="prevMaterials(material)" :hideEnoughMaterials="materialstore.hideEnoughMaterials"></Material>
+          :class="{ 'left-align': isLastRow(index) }" :mat="material" :prev="prevMaterials(material)"
+          :hideEnoughMaterials="materialstore.hideEnoughMaterials"></Material>
       </v-container>
     </v-main>
   </v-app>
@@ -171,45 +173,41 @@ const calcMaterial = (character: Character) => {
       default:
         break;
     }
-    // 目標のスキルレベル
-    const targetSkillLevel = condition.target_slv;
-    // 各スキルの素材必要数
-    const materialRequiredPerLevel: number[] = rarity == "S" ? [6, 10, 6, 10, 6, 8, 4, 6, 8] : rarity == "A" ? [5, 8, 5, 8, 5, 6, 3, 5, 6] : rarity == "B" ? [4, 6, 4, 6, 4, 5, 2, 4, 5] : [];
-    const moduleRequiredPerLevel: number[] = rarity == "S" ? [8, 16, 10, 16, 8, 10, 8, 10, 15] : rarity == "A" ? [6, 12, 8, 12, 6, 8, 6, 8, 12] : rarity == "B" ? [5, 10, 6, 10, 5, 6, 5, 6, 10] : [];
-    const naikaiRequiredPerLevel: number[] = rarity == "S" ? [0, 0, 0, 0, 0, 0, 1, 2, 2] : rarity == "A" ? [0, 0, 0, 0, 0, 0, 1, 1, 2] : rarity == "B" ? [0, 0, 0, 0, 0, 0, 1, 1, 1] : [];
-    const disCoinRequiredPerLevel: number[] = rarity == "S" ? [4000, 6000, 8500, 12800, 19200, 30000, 86000, 175000, 260000] : rarity == "A" ? [3000, 5000, 7000, 10500, 16000, 25000, 72000, 150000, 210000] : rarity == "B" ? [0, 0, 0, 0, 0, 0, 1, 1, 1] : [];
-    const nID: number = naikai == "囁き" ? 0 : naikai == "亡骸" ? 1 : naikai == "狂念" ? 2 : 0;
-    // 各スキルごとの必要素材数を計算して合計する
-    for (let i = 0; i < condition.slv.length; i++) {
-      const currentLevel = condition.slv[i];
-      if (currentLevel < targetSkillLevel[i]) {
-        for (let j = currentLevel; j < targetSkillLevel[i]; j++) {
-          let r = Math.floor((j - 1) / 2);
-          if (r > 3) { r = 3; };
-          materialstore.categories[sm][r].required += materialRequiredPerLevel[j - 1];
-          materialstore.categories['モジュール'][r].required += moduleRequiredPerLevel[j - 1];
-          materialstore.categories['内海'][nID].required += naikaiRequiredPerLevel[j - 1];
-          materialstore.categories['ディスコイン'][0].required += disCoinRequiredPerLevel[j - 1];
-          if (j == 9) {
-            materialstore.categories['コア'][0].required += 1;
-            requirednum('コア');
-          }
-          requirednum(sm);
-          requirednum('ディスコイン');
-          requirednum('モジュール');
-          requirednum('内海');
+  }
+
+  requirednum(rum1);
+  requirednum(rum2);
+  requirednum(sm);
+  requirednum(sin + "原素");
+  // 目標のスキルレベル
+  const targetSkillLevel = condition.target_slv;
+  // 各スキルの素材必要数
+  const materialRequiredPerLevel: number[] = rarity == "S" ? [6, 10, 6, 10, 6, 8, 4, 6, 8] : rarity == "A" ? [5, 8, 5, 8, 5, 6, 3, 5, 6] : rarity == "B" ? [4, 6, 4, 6, 4, 5, 2, 4, 5] : [];
+  const moduleRequiredPerLevel: number[] = rarity == "S" ? [8, 16, 10, 16, 8, 10, 8, 10, 15] : rarity == "A" ? [6, 12, 8, 12, 6, 8, 6, 8, 12] : rarity == "B" ? [5, 10, 6, 10, 5, 6, 5, 6, 10] : [];
+  const naikaiRequiredPerLevel: number[] = rarity == "S" ? [0, 0, 0, 0, 0, 0, 1, 2, 2] : rarity == "A" ? [0, 0, 0, 0, 0, 0, 1, 1, 2] : rarity == "B" ? [0, 0, 0, 0, 0, 0, 1, 1, 1] : [];
+  const disCoinRequiredPerLevel: number[] = rarity == "S" ? [4000, 6000, 8500, 12800, 19200, 30000, 86000, 175000, 260000] : rarity == "A" ? [3000, 5000, 7000, 10500, 16000, 25000, 72000, 150000, 210000] : rarity == "B" ? [0, 0, 0, 0, 0, 0, 1, 1, 1] : [];
+  const nID: number = naikai == "囁き" ? 0 : naikai == "亡骸" ? 1 : naikai == "狂念" ? 2 : 0;
+  // 各スキルごとの必要素材数を計算して合計する
+  for (let i = 0; i < condition.slv.length; i++) {
+    const currentLevel = condition.slv[i];
+    if (currentLevel < targetSkillLevel[i]) {
+      for (let j = currentLevel; j < targetSkillLevel[i]; j++) {
+        let r = Math.floor((j - 1) / 2);
+        if (r > 3) { r = 3; };
+        materialstore.categories[sm][r].required += materialRequiredPerLevel[j - 1];
+        materialstore.categories['モジュール'][r].required += moduleRequiredPerLevel[j - 1];
+        materialstore.categories['内海'][nID].required += naikaiRequiredPerLevel[j - 1];
+        materialstore.categories['ディスコイン'][0].required += disCoinRequiredPerLevel[j - 1];
+        if (j == 9) {
+          materialstore.categories['コア'][0].required += 1;
+          requirednum('コア');
         }
+        requirednum(sm);
+        requirednum('ディスコイン');
+        requirednum('モジュール');
+        requirednum('内海');
       }
     }
-
-
-
-
-    requirednum(rum1);
-    requirednum(rum2);
-    requirednum(sm);
-    requirednum(sin + "原素");
-
   }
 
 
