@@ -13,36 +13,26 @@
         </v-row>
         <v-row>
           <v-btn width="100px" height="40px" color="#000000" disabled rounded="0" class="my-2 mr-3" text="フィルタ"></v-btn>
-          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('ディスコイン')"
-            :class="{ 'active': isSelected('ディスコイン') }">ディスコイン</v-btn>
+          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('ディスコイン')" :class="{ 'active': isSelected('ディスコイン') }">ディスコイン</v-btn>
           <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('箱')" :class="{ 'active': isSelected('箱') }">箱</v-btn>
-          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('モジュール')"
-            :class="{ 'active': isSelected('モジュール') }">モジュール</v-btn>
-          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('原素')"
-            :class="{ 'active': isSelected('原素') }">原素</v-btn>
-          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('コア')"
-            :class="{ 'active': isSelected('コア') }">コア</v-btn>
-          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('内海')"
-            :class="{ 'active': isSelected('内海') }">内海</v-btn>
-          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleRequiredMaterials()"
-            :class="{ 'active': materialstore.showRequiredMaterials }">不要素材</v-btn>
+          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('モジュール')" :class="{ 'active': isSelected('モジュール') }">モジュール</v-btn>
+          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('原素')" :class="{ 'active': isSelected('原素') }">原素</v-btn>
+          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('コア')" :class="{ 'active': isSelected('コア') }">コア</v-btn>
+          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('内海')" :class="{ 'active': isSelected('内海') }">内海</v-btn>
+          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleRequiredMaterials()" :class="{ 'active': materialstore.showRequiredMaterials }">不要素材</v-btn>
         </v-row>
         <v-row>
           <v-btn height="40px" width="100px" color="#000000" disabled rounded="0" class="my-2 mr-3" text="オプション"></v-btn>
           <v-tooltip bottom text="素材の所持数や必要数、コンビクトの選択をリセットします" location="bottom">
             <template v-slot:activator="{ props }">
-              <VBtn width="100px" height="40px" dark v-bind="props" class="bg-red-darken-2 my-2 mx-1 pa-2"
-                @click="reset()" text="reset"></VBtn>
+              <VBtn width="100px" height="40px" dark v-bind="props" class="bg-red-darken-2 my-2 mx-1 pa-2" @click="reset()" text="reset"></VBtn>
             </template>
           </v-tooltip>
-          <v-switch color="indigo-accent-2" v-model="materialstore.hideEnoughMaterials" hide-details
-            class="my-0 mx-5 pa-0" label="収集済み素材を半透明に"></v-switch>
+          <v-switch color="indigo-accent-2" v-model="materialstore.hideEnoughMaterials" hide-details class="my-0 mx-5 pa-0" label="収集済み素材を半透明に"></v-switch>
         </v-row>
       </v-container>
       <v-container class="d-flex flex-wrap align-content-start justify-start">
-        <Material class="ma-2" style="max-width: 200px;" v-for=" (material, index) in filteredMaterials"
-          :class="{ 'left-align': isLastRow(index) }" :mat="material" :prev="prevMaterials(material)"
-          :hideEnoughMaterials="materialstore.hideEnoughMaterials"></Material>
+        <Material class="ma-2" style="max-width: 200px;" v-for=" (material, index) in filteredMaterials" :class="{ 'left-align': isLastRow(index) }" :mat="material" :prev="prevMaterials(material)" :hideEnoughMaterials="materialstore.hideEnoughMaterials"></Material>
       </v-container>
     </v-main>
   </v-app>
