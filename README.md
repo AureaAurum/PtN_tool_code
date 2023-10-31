@@ -22,6 +22,7 @@ This project is inspired by [arkntools/arknights-toolbox](https://github.com/ark
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details
 
 # 更新履歴
+2023-10-31 伊芙, 优利卡を追加  
 2023-10-22 コンビクト詳細画面に使用する素材の種類表示を追加  
 2023-10-22 ランクアップ3済みの場合素材が正しく計算されないバグを修正  
 2023-10-21 翻訳追加:コクリコ, クリスティナ  

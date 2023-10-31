@@ -41,7 +41,7 @@ replace:
 - after: 'NOX'
   before: 禁闭者:诺克斯
   index: 14
-- after: '克里斯蒂娜'
+- after: 'クリスティナ'
   before: 禁闭者:克里斯蒂娜
   index: 15
 - after: 'カスロ'
@@ -179,7 +179,7 @@ replace:
 - after: 'ジョーン'
   before: 禁闭者:琼
   index: 60
-- after: '可可莉克'
+- after: 'コクリコ'
   before: 禁闭者:可可莉克
   index: 61
 - after: 'カベルネ'
@@ -301,3 +301,9 @@ replace:
 - after: '雷温'
   before: 禁闭者:雷温
   index: 99
+- after: '优利卡'
+  before: 禁闭者:优利卡
+  index: 100
+- after: '伊芙'
+  before: 禁闭者:伊芙
+  index: 101
