@@ -307,3 +307,9 @@ replace:
 - after: '伊芙'
   before: 禁闭者:伊芙
   index: 101
+- after: '唐'
+  before: 禁闭者:唐
+  index: 102
+- after: '玛蒂尔达'
+  before: 禁闭者:玛蒂尔达
+  index: 103

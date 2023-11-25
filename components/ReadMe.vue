@@ -52,6 +52,7 @@ wiki\n
 This project is inspired by [arkntools/arknights-toolbox](https://github.com/arkntools/arknights-toolbox)
 
 # 更新履歴
+2023-11-25 唐, 玛蒂尔达を追加。スマホでの背景色の乱れを修正\n
 2023-10-31 伊芙, 优利卡を追加\n
 2023-10-22 コンビクト詳細画面に使用する素材の種類表示を追加\n
 2023-10-22 ランクアップ3済みの場合素材が正しく計算されないバグを修正\n

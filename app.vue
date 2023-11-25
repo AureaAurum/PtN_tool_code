@@ -351,6 +351,12 @@ const isLastRow = (index: number) => {
 
 </script>
 
+<style>
+body{
+  background-color: #212121 !important;
+}
+</style>
+
 <style scoped>
 .active {
   background-color: black !important;
