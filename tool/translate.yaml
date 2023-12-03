@@ -74,7 +74,7 @@ replace:
 - after: '澈'
   before: 禁闭者:澈
   index: 25
-- after: '曼缇斯'
+- after: 'マンティス'
   before: 禁闭者:曼缇斯
   index: 26
 - after: 'アデラ'
@@ -191,7 +191,7 @@ replace:
 - after: 'ハーメル'
   before: 禁闭者:哈梅尔
   index: 64
-- after: '卡西娅'
+- after: 'カシア'
   before: 禁闭者:卡西娅
   index: 65
 - after: 'レタ'

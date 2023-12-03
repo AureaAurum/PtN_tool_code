@@ -76,8 +76,8 @@ if  any(characters):
     # 現在の日付と時刻を文字列に変換
     current_datetime_str = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
     chjson = {}
-    chjson["Characters"] = characters
     chjson["createdDate"] = current_datetime_str
+    chjson["Characters"] = characters
     path = './characters.json'
     json_file = open(path, mode="w", encoding='UTF-8')
     json.dump(chjson, json_file, indent=2, ensure_ascii=False)
