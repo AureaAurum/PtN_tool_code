@@ -23,9 +23,14 @@
         </v-row>
         <v-row>
           <v-btn height="40px" width="100px" color="#000000" disabled rounded="0" class="my-2 mr-3" text="オプション"></v-btn>
-          <v-tooltip bottom text="素材の所持数や必要数、コンビクトの選択をリセットします" location="bottom">
+          <v-tooltip bottom text="素材の所持数をリセットします" location="bottom">
             <template v-slot:activator="{ props }">
-              <VBtn width="100px" height="40px" dark v-bind="props" class="bg-red-darken-2 my-2 mx-1 pa-2" @click="reset()" text="reset"></VBtn>
+              <VBtn width="140px" height="40px" dark v-bind="props" class="bg-red-darken-2 my-2 mx-1 pa-2" @click="ownreset()" text="所持数のリセット"></VBtn>
+            </template>
+          </v-tooltip>
+          <v-tooltip bottom text="素材の必要数と選択コンビクトをリセットします" location="bottom">
+            <template v-slot:activator="{ props }">
+              <VBtn width="140px" height="40px" dark v-bind="props" class="bg-red-darken-2 my-2 mx-1 pa-2" @click="needreset()" text="必要数のリセット"></VBtn>
             </template>
           </v-tooltip>
           <v-switch color="indigo-accent-2" v-model="materialstore.hideEnoughMaterials" hide-details class="my-0 mx-5 pa-0" label="収集済み素材を半透明に"></v-switch>
@@ -248,24 +253,17 @@ watch(() => [...characters.selected], (after, before) => {
 
 });
 
-async function reset() {
+async function ownreset() {
   await materialstore.init();
-  for (const c of characters.selected) {
-    if (characters.data[c.name]) {
-      characters.data[c.name].condition = {
-        "level": 1,
-        "ru1": "false",
-        "ru2": "false",
-        "ru3": "false",
-        "slv": [1, 1, 1, 1],
-        "target_slv": [10, 10, 10, 10]
-      };
+  for (const category of Object.values<Material[]>(materialstore.categories)) {
+    for (const material of category) {
+      material.owned = "";
     }
-
   }
-  characters.selected = [];
 }
-
+async function needreset() {
+  characters.selected = []
+}
 
 
 

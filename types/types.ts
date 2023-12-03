@@ -3,8 +3,8 @@ export interface Material {
   category: string;
   rarity: number | string;
   name: string;
-  required: number | string;
-  owned: number;
+  required: number | "";
+  owned: number | "";
   short: number;
   totalRequired : number;
 }
