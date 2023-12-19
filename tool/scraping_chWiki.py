@@ -1,4 +1,5 @@
 import requests
+from pathlib import Path
 import json
 import time
 from bs4 import BeautifulSoup
@@ -58,9 +59,13 @@ if resp_tabs_container:
                 character = {"rarity":rarity,"name":title,"ename":english, "sin":sin, "rankup_material1":rankup_material1,"rankup_material2":rankup_material2,"skill_material":skill_material, "naikai":naikai,"condition":condition}
                 characters[title] = character
 
-                url = target_element3.get('src')
-                download_image(url, f"{english}.png")
-                print(f'{title} done')
+                currentdir = Path(__file__).parent
+                img = currentdir / f'../public/img/characters/{english}.png'
+                if not img.exists():
+                    print("image downloading...")
+                    url = target_element3.get('src')
+                    download_image(url, f"{english}.png")
+                print(f'{title}, {english} done')
             else:
                 print(f"{title}が見つかりませんでした。")
                 missing.append(title)

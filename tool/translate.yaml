@@ -295,10 +295,10 @@ replace:
   before: '"普"'
   index: 97
 
-- after: '妮诺'
+- after: 'ニノ'
   before: 禁闭者:妮诺
   index: 98
-- after: '雷温'
+- after: 'エブン'
   before: 禁闭者:雷温
   index: 99
 - after: '优利卡'
@@ -313,3 +313,9 @@ replace:
 - after: '玛蒂尔达'
   before: 禁闭者:玛蒂尔达
   index: 103
+- after: '艾可'
+  before: 禁闭者:艾可
+  index: 104
+- after: '珀尔夫人'
+  before: 禁闭者:珀尔夫人
+  index: 105

@@ -68,7 +68,7 @@ const name = computed(() => {
 
 const shortage = computed(() => {
   const previousmaterials = props.prev;
-  const owned = props.mat.owned;
+  const owned = typeof props.mat.owned == "number" ? props.mat.owned : 0;
   const required = Number(props.mat.required);
   props.mat.totalRequired = required;
   let shortage = 0;

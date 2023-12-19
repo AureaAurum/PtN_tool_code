@@ -28,6 +28,11 @@
                                 <v-img v-bind="props" :src="'/img/materials/' + materialstore.categories[p.item.raw.skill_material][3].id + '.png'" aspect-ratio="1" height="30px" width="30px"></v-img>
                             </template>
                         </v-tooltip>
+                        <v-tooltip bottom :text="`内海素材:${ p.item.raw.naikai }`" location="bottom">
+                            <template v-slot:activator="{ props }" v-if="show">
+                                <v-img v-bind="props" :src="'/img/materials/' + materialstore.categories['内海'][nID].id + '.png'" aspect-ratio="1" height="30px" width="30px"></v-img>
+                            </template>
+                        </v-tooltip>
                     </div>
                 </v-card-title>
                 <v-card-text class="pa-0">
@@ -127,6 +132,8 @@
 
 <script setup lang="ts">
 const p = defineProps<{ item: any; }>();
+const nID: number = p.item.raw.naikai == "囁き" ? 0 : p.item.raw.naikai == "亡骸" ? 1 : p.item.raw.naikai == "狂念" ? 2 : -1;
+const show = nID < 0 ? false : true;
 import type { Character, Characters, ChJsonData, Condition, Material } from '~/types/types';
 import { useMaterialStore } from '@/store/material';
 import { useCharacterStore } from '@/store/characters';

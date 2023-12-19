@@ -22,6 +22,7 @@ This project is inspired by [arkntools/arknights-toolbox](https://github.com/ark
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details
 
 # 更新履歴
+2023-12-19 追加:Lady Pearl, Echo。翻訳追加:エブン, ニノ。コンビクト詳細画面に内海素材の表示を追加。  
 2023-12-03 翻訳追加:マンティス, カシア。リセット機能の調整。  
 2023-11-25 唐, 玛蒂尔达を追加。スマホでの背景色の乱れを修正  
 2023-10-31 伊芙, 优利卡を追加  

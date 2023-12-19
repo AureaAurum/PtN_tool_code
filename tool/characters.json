@@ -1,0 +1,1463 @@
+{
+  "createdDate": "2023-12-19 15:21:43",
+  "Characters": {
+    "ラーフ": {
+      "rarity": "S",
+      "name": "ラーフ",
+      "ename": "Rahu",
+      "sin": "エンデュア",
+      "rankup_material1": "涙石",
+      "rankup_material2": "触手",
+      "skill_material": "角",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ガオ": {
+      "rarity": "S",
+      "name": "ガオ",
+      "ename": "OwO",
+      "sin": "エンデュア",
+      "rankup_material1": "涙石",
+      "rankup_material2": "骨",
+      "skill_material": "角",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "デーモン": {
+      "rarity": "S",
+      "name": "デーモン",
+      "ename": "DEMON",
+      "sin": "エンデュア",
+      "rankup_material1": "氷",
+      "rankup_material2": "角",
+      "skill_material": "氷",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ニノ": {
+      "rarity": "A",
+      "name": "ニノ",
+      "ename": "Nino",
+      "sin": "エンデュア",
+      "rankup_material1": "嚢胞",
+      "rankup_material2": "毒砂",
+      "skill_material": "曲銅",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ユーニ": {
+      "rarity": "A",
+      "name": "ユーニ",
+      "ename": "Uni",
+      "sin": "エンデュア",
+      "rankup_material1": "鞘翅",
+      "rankup_material2": "涙石",
+      "skill_material": "毒砂",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "レヴィ": {
+      "rarity": "A",
+      "name": "レヴィ",
+      "ename": "Levy",
+      "sin": "エンデュア",
+      "rankup_material1": "触手",
+      "rankup_material2": "涙石",
+      "skill_material": "嚢胞",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "カワカワ": {
+      "rarity": "A",
+      "name": "カワカワ",
+      "ename": "Kava-Kava",
+      "sin": "エンデュア",
+      "rankup_material1": "涙石",
+      "rankup_material2": "角",
+      "skill_material": "氷",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "チェルシー伯爵": {
+      "rarity": "A",
+      "name": "チェルシー伯爵",
+      "ename": "Chelsea",
+      "sin": "エンデュア",
+      "rankup_material1": "暮輝石",
+      "rankup_material2": "鞘翅",
+      "skill_material": "鞘翅",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "辰砂": {
+      "rarity": "A",
+      "name": "辰砂",
+      "ename": "Cinnabar",
+      "sin": "エンデュア",
+      "rankup_material1": "赤石",
+      "rankup_material2": "嚢胞",
+      "skill_material": "嚢胞",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "K.K.": {
+      "rarity": "B",
+      "name": "K.K.",
+      "ename": "K.K.",
+      "sin": "エンデュア",
+      "rankup_material1": "赤石",
+      "rankup_material2": "ゲル",
+      "skill_material": "鞘翅",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ペギー": {
+      "rarity": "B",
+      "name": "ペギー",
+      "ename": "Peggy",
+      "sin": "エンデュア",
+      "rankup_material1": "曲銅",
+      "rankup_material2": "鞘翅",
+      "skill_material": "暮輝石",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "デモーリー": {
+      "rarity": "B",
+      "name": "デモーリー",
+      "ename": "Demolia",
+      "sin": "エンデュア",
+      "rankup_material1": "涙石",
+      "rankup_material2": "鞘翅",
+      "skill_material": "嚢胞",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "唐": {
+      "rarity": "S",
+      "name": "唐",
+      "ename": "Don",
+      "sin": "フューリー",
+      "rankup_material1": "赤石",
+      "rankup_material2": "鞘翅",
+      "skill_material": "骨",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "デイリン": {
+      "rarity": "S",
+      "name": "デイリン",
+      "ename": "Deren",
+      "sin": "フューリー",
+      "rankup_material1": "赤石",
+      "rankup_material2": "触手",
+      "skill_material": "骨",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ゾーヤ": {
+      "rarity": "S",
+      "name": "ゾーヤ",
+      "ename": "ZOYA",
+      "sin": "フューリー",
+      "rankup_material1": "赤石",
+      "rankup_material2": "ゲル",
+      "skill_material": "暮輝石",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "NOX": {
+      "rarity": "S",
+      "name": "NOX",
+      "ename": "NOX",
+      "sin": "フューリー",
+      "rankup_material1": "涙石",
+      "rankup_material2": "嚢胞",
+      "skill_material": "赤石",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "クリスティナ": {
+      "rarity": "A",
+      "name": "クリスティナ",
+      "ename": "Christina",
+      "sin": "フューリー",
+      "rankup_material1": "骨",
+      "rankup_material2": "赤石",
+      "skill_material": "氷",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "カスロ": {
+      "rarity": "A",
+      "name": "カスロ",
+      "ename": "Corso",
+      "sin": "フューリー",
+      "rankup_material1": "角",
+      "rankup_material2": "赤石",
+      "skill_material": "暮輝石",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "メイス": {
+      "rarity": "A",
+      "name": "メイス",
+      "ename": "Mess",
+      "sin": "フューリー",
+      "rankup_material1": "ゲル",
+      "rankup_material2": "氷",
+      "skill_material": "赤石",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ウェンディ": {
+      "rarity": "A",
+      "name": "ウェンディ",
+      "ename": "Wendy",
+      "sin": "フューリー",
+      "rankup_material1": "曲銅",
+      "rankup_material2": "角",
+      "skill_material": "赤石",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ナインティナイン": {
+      "rarity": "A",
+      "name": "ナインティナイン",
+      "ename": "NINETY-NINE",
+      "sin": "フューリー",
+      "rankup_material1": "毒砂",
+      "rankup_material2": "触手",
+      "skill_material": "暮輝石",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ペガシ": {
+      "rarity": "A",
+      "name": "ペガシ",
+      "ename": "Pacassi",
+      "sin": "フューリー",
+      "rankup_material1": "触手",
+      "rankup_material2": "涙石",
+      "skill_material": "涙石",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ホロ": {
+      "rarity": "A",
+      "name": "ホロ",
+      "ename": "Horo",
+      "sin": "フューリー",
+      "rankup_material1": "角",
+      "rankup_material2": "暮輝石",
+      "skill_material": "曲銅",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ドリー": {
+      "rarity": "A",
+      "name": "ドリー",
+      "ename": "DollY",
+      "sin": "フューリー",
+      "rankup_material1": "骨",
+      "rankup_material2": "毒砂",
+      "skill_material": "毒砂",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ヘラ": {
+      "rarity": "B",
+      "name": "ヘラ",
+      "ename": "HELLA",
+      "sin": "フューリー",
+      "rankup_material1": "触手",
+      "rankup_material2": "赤石",
+      "skill_material": "赤石",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ペッパー": {
+      "rarity": "B",
+      "name": "ペッパー",
+      "ename": "Pepper",
+      "sin": "フューリー",
+      "rankup_material1": "角",
+      "rankup_material2": "毒砂",
+      "skill_material": "毒砂",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "澈": {
+      "rarity": "B",
+      "name": "澈",
+      "ename": "Che",
+      "sin": "フューリー",
+      "rankup_material1": "骨",
+      "rankup_material2": "氷",
+      "skill_material": "涙石",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "マンティス": {
+      "rarity": "S",
+      "name": "マンティス",
+      "ename": "Mantis",
+      "sin": "アンブラ",
+      "rankup_material1": "角",
+      "rankup_material2": "涙石",
+      "skill_material": "暮輝石",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "アデラ": {
+      "rarity": "S",
+      "name": "アデラ",
+      "ename": "Adela",
+      "sin": "アンブラ",
+      "rankup_material1": "嚢胞",
+      "rankup_material2": "暮輝石",
+      "skill_material": "涙石",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ナチャ": {
+      "rarity": "S",
+      "name": "ナチャ",
+      "ename": "Serpent",
+      "sin": "アンブラ",
+      "rankup_material1": "角",
+      "rankup_material2": "赤石",
+      "skill_material": "暮輝石",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ハクイツ": {
+      "rarity": "S",
+      "name": "ハクイツ",
+      "ename": "BAIYI",
+      "sin": "アンブラ",
+      "rankup_material1": "毒砂",
+      "rankup_material2": "鞘翅",
+      "skill_material": "涙石",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "コージ": {
+      "rarity": "S",
+      "name": "コージ",
+      "ename": "CRACHE",
+      "sin": "アンブラ",
+      "rankup_material1": "曲銅",
+      "rankup_material2": "ゲル",
+      "skill_material": "毒砂",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "优利卡": {
+      "rarity": "A",
+      "name": "优利卡",
+      "ename": "Eureka",
+      "sin": "アンブラ",
+      "rankup_material1": "暮輝石",
+      "rankup_material2": "骨",
+      "skill_material": "触手",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ガロファノ": {
+      "rarity": "A",
+      "name": "ガロファノ",
+      "ename": "Garofano",
+      "sin": "アンブラ",
+      "rankup_material1": "嚢胞",
+      "rankup_material2": "曲銅",
+      "skill_material": "ゲル",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "リン": {
+      "rarity": "A",
+      "name": "リン",
+      "ename": "Lynn",
+      "sin": "アンブラ",
+      "rankup_material1": "毒砂",
+      "rankup_material2": "ゲル",
+      "skill_material": "ゲル",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "マックイーン": {
+      "rarity": "A",
+      "name": "マックイーン",
+      "ename": "Mcqueen",
+      "sin": "アンブラ",
+      "rankup_material1": "嚢胞",
+      "rankup_material2": "曲銅",
+      "skill_material": "毒砂",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "テトラ": {
+      "rarity": "A",
+      "name": "テトラ",
+      "ename": "Tetra",
+      "sin": "アンブラ",
+      "rankup_material1": "鞘翅",
+      "rankup_material2": "曲銅",
+      "skill_material": "角",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "アイン": {
+      "rarity": "A",
+      "name": "アイン",
+      "ename": "IRON",
+      "sin": "アンブラ",
+      "rankup_material1": "ゲル",
+      "rankup_material2": "毒砂",
+      "skill_material": "触手",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "菫": {
+      "rarity": "A",
+      "name": "菫",
+      "ename": "Sumire",
+      "sin": "アンブラ",
+      "rankup_material1": "嚢胞",
+      "rankup_material2": "毒砂",
+      "skill_material": "角",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ラビリンス": {
+      "rarity": "B",
+      "name": "ラビリンス",
+      "ename": "LABYRINTH",
+      "sin": "アンブラ",
+      "rankup_material1": "ゲル",
+      "rankup_material2": "曲銅",
+      "skill_material": "曲銅",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ゲツライコウ": {
+      "rarity": "B",
+      "name": "ゲツライコウ",
+      "ename": "Gekkabijin",
+      "sin": "アンブラ",
+      "rankup_material1": "鞘翅",
+      "rankup_material2": "暮輝石",
+      "skill_material": "触手",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "珀尔夫人": {
+      "rarity": "S",
+      "name": "珀尔夫人",
+      "ename": "Lady Pearl",
+      "sin": "レチクル",
+      "rankup_material1": "毒砂",
+      "rankup_material2": "骨",
+      "skill_material": "角",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "シャローム": {
+      "rarity": "S",
+      "name": "シャローム",
+      "ename": "Shalom",
+      "sin": "レチクル",
+      "rankup_material1": "曲銅",
+      "rankup_material2": "角",
+      "skill_material": "鞘翅",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "デレーヤ": {
+      "rarity": "S",
+      "name": "デレーヤ",
+      "ename": "Dreya",
+      "sin": "レチクル",
+      "rankup_material1": "ゲル",
+      "rankup_material2": "氷",
+      "skill_material": "赤石",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "コフィン": {
+      "rarity": "S",
+      "name": "コフィン",
+      "ename": "Oak casket",
+      "sin": "レチクル",
+      "rankup_material1": "氷",
+      "rankup_material2": "触手",
+      "skill_material": "曲銅",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "夏音": {
+      "rarity": "S",
+      "name": "夏音",
+      "ename": "Summer",
+      "sin": "レチクル",
+      "rankup_material1": "触手",
+      "rankup_material2": "氷",
+      "skill_material": "曲銅",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ラングリー": {
+      "rarity": "S",
+      "name": "ラングリー",
+      "ename": "Langley",
+      "sin": "レチクル",
+      "rankup_material1": "骨",
+      "rankup_material2": "曲銅",
+      "skill_material": "触手",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "玛蒂尔达": {
+      "rarity": "A",
+      "name": "玛蒂尔达",
+      "ename": "Matilda",
+      "sin": "レチクル",
+      "rankup_material1": "涙石",
+      "rankup_material2": "角",
+      "skill_material": "ゲル",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ルリエカ": {
+      "rarity": "A",
+      "name": "ルリエカ",
+      "ename": "Roulecca",
+      "sin": "レチクル",
+      "rankup_material1": "赤石",
+      "rankup_material2": "鞘翅",
+      "skill_material": "嚢胞",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "プリシラ": {
+      "rarity": "A",
+      "name": "プリシラ",
+      "ename": "Priscilla",
+      "sin": "レチクル",
+      "rankup_material1": "暮輝石",
+      "rankup_material2": "嚢胞",
+      "skill_material": "鞘翅",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "クズリ": {
+      "rarity": "A",
+      "name": "クズリ",
+      "ename": "Wolverine",
+      "sin": "レチクル",
+      "rankup_material1": "涙石",
+      "rankup_material2": "骨",
+      "skill_material": "氷",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "EMP": {
+      "rarity": "B",
+      "name": "EMP",
+      "ename": "EMP",
+      "sin": "レチクル",
+      "rankup_material1": "氷",
+      "rankup_material2": "嚢胞",
+      "skill_material": "骨",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "フローラ": {
+      "rarity": "B",
+      "name": "フローラ",
+      "ename": "FLORA",
+      "sin": "レチクル",
+      "rankup_material1": "暮輝石",
+      "rankup_material2": "嚢胞",
+      "skill_material": "角",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "エブン": {
+      "rarity": "S",
+      "name": "エブン",
+      "ename": "Eleven",
+      "sin": "アーケイン",
+      "rankup_material1": "鞘翅",
+      "rankup_material2": "暮輝石",
+      "skill_material": "涙石",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "クロウ": {
+      "rarity": "S",
+      "name": "クロウ",
+      "ename": "Raven",
+      "sin": "アーケイン",
+      "rankup_material1": "骨",
+      "rankup_material2": "曲銅",
+      "skill_material": "氷",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "アイティ": {
+      "rarity": "S",
+      "name": "アイティ",
+      "ename": "Etti",
+      "sin": "アーケイン",
+      "rankup_material1": "曲銅",
+      "rankup_material2": "骨",
+      "skill_material": "鞘翅",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "スターゲイザー": {
+      "rarity": "S",
+      "name": "スターゲイザー",
+      "ename": "astrologer",
+      "sin": "アーケイン",
+      "rankup_material1": "嚢胞",
+      "rankup_material2": "毒砂",
+      "skill_material": "角",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "エイレーネー": {
+      "rarity": "S",
+      "name": "エイレーネー",
+      "ename": "Eirene",
+      "sin": "アーケイン",
+      "rankup_material1": "ゲル",
+      "rankup_material2": "赤石",
+      "skill_material": "骨",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "艾可": {
+      "rarity": "A",
+      "name": "艾可",
+      "ename": "Echo",
+      "sin": "アーケイン",
+      "rankup_material1": "曲銅",
+      "rankup_material2": "触手",
+      "skill_material": "鞘翅",
+      "naikai": "",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ラミア": {
+      "rarity": "A",
+      "name": "ラミア",
+      "ename": "Lamia",
+      "sin": "アーケイン",
+      "rankup_material1": "赤石",
+      "rankup_material2": "ゲル",
+      "skill_material": "骨",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ルヴィア・レイ": {
+      "rarity": "A",
+      "name": "ルヴィア・レイ",
+      "ename": "Luvia Ray",
+      "sin": "アーケイン",
+      "rankup_material1": "触手",
+      "rankup_material2": "氷",
+      "skill_material": "涙石",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ヘカテー": {
+      "rarity": "A",
+      "name": "ヘカテー",
+      "ename": "Hecate",
+      "sin": "アーケイン",
+      "rankup_material1": "骨",
+      "rankup_material2": "暮輝石",
+      "skill_material": "毒砂",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ビクトリア": {
+      "rarity": "A",
+      "name": "ビクトリア",
+      "ename": "VICTORIA",
+      "sin": "アーケイン",
+      "rankup_material1": "毒砂",
+      "rankup_material2": "骨",
+      "skill_material": "暮輝石",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "イグニ": {
+      "rarity": "A",
+      "name": "イグニ",
+      "ename": "IGNIS",
+      "sin": "アーケイン",
+      "rankup_material1": "曲銅",
+      "rankup_material2": "角",
+      "skill_material": "赤石",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "オリバー": {
+      "rarity": "A",
+      "name": "オリバー",
+      "ename": "Oliver",
+      "sin": "アーケイン",
+      "rankup_material1": "角",
+      "rankup_material2": "暮輝石",
+      "skill_material": "曲銅",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ケルビン": {
+      "rarity": "B",
+      "name": "ケルビン",
+      "ename": "Kelvin",
+      "sin": "アーケイン",
+      "rankup_material1": "涙石",
+      "rankup_material2": "触手",
+      "skill_material": "ゲル",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ジョーン": {
+      "rarity": "B",
+      "name": "ジョーン",
+      "ename": "Joan",
+      "sin": "アーケイン",
+      "rankup_material1": "毒砂",
+      "rankup_material2": "鞘翅",
+      "skill_material": "鞘翅",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "伊芙": {
+      "rarity": "S",
+      "name": "伊芙",
+      "ename": "Eve",
+      "sin": "カタリシス",
+      "rankup_material1": "氷",
+      "rankup_material2": "嚢胞",
+      "skill_material": "毒砂",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "コクリコ": {
+      "rarity": "S",
+      "name": "コクリコ",
+      "ename": "Coquelic",
+      "sin": "カタリシス",
+      "rankup_material1": "触手",
+      "rankup_material2": "暮輝石",
+      "skill_material": "嚢胞",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "カベルネ": {
+      "rarity": "S",
+      "name": "カベルネ",
+      "ename": "Cabernet",
+      "sin": "カタリシス",
+      "rankup_material1": "暮輝石",
+      "rankup_material2": "角",
+      "skill_material": "触手",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "エンフェル": {
+      "rarity": "S",
+      "name": "エンフェル",
+      "ename": "Enfer",
+      "sin": "カタリシス",
+      "rankup_material1": "鞘翅",
+      "rankup_material2": "毒砂",
+      "skill_material": "涙石",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "ハーメル": {
+      "rarity": "S",
+      "name": "ハーメル",
+      "ename": "Hamel",
+      "sin": "カタリシス",
+      "rankup_material1": "氷",
+      "rankup_material2": "鞘翅",
+      "skill_material": "ゲル",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "カシア": {
+      "rarity": "A",
+      "name": "カシア",
+      "ename": "Cassia",
+      "sin": "カタリシス",
+      "rankup_material1": "ゲル",
+      "rankup_material2": "氷",
+      "skill_material": "赤石",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "レタ": {
+      "rarity": "A",
+      "name": "レタ",
+      "ename": "Letta",
+      "sin": "カタリシス",
+      "rankup_material1": "氷",
+      "rankup_material2": "角",
+      "skill_material": "曲銅",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "トト": {
+      "rarity": "A",
+      "name": "トト",
+      "ename": "Dudu",
+      "sin": "カタリシス",
+      "rankup_material1": "暮輝石",
+      "rankup_material2": "ゲル",
+      "skill_material": "触手",
+      "naikai": "亡骸",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "カメリアン": {
+      "rarity": "A",
+      "name": "カメリアン",
+      "ename": "chameleon",
+      "sin": "カタリシス",
+      "rankup_material1": "鞘翅",
+      "rankup_material2": "曲銅",
+      "skill_material": "骨",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "アン": {
+      "rarity": "A",
+      "name": "アン",
+      "ename": "Anne",
+      "sin": "カタリシス",
+      "rankup_material1": "嚢胞",
+      "rankup_material2": "氷",
+      "skill_material": "角",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "Mr.Fox": {
+      "rarity": "A",
+      "name": "Mr.Fox",
+      "ename": "Fox",
+      "sin": "カタリシス",
+      "rankup_material1": "氷",
+      "rankup_material2": "嚢胞",
+      "skill_material": "ゲル",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "アリエル": {
+      "rarity": "A",
+      "name": "アリエル",
+      "ename": "ARIEL",
+      "sin": "カタリシス",
+      "rankup_material1": "ゲル",
+      "rankup_material2": "赤石",
+      "skill_material": "触手",
+      "naikai": "狂念",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "マキアート": {
+      "rarity": "B",
+      "name": "マキアート",
+      "ename": "Macchiato",
+      "sin": "カタリシス",
+      "rankup_material1": "触手",
+      "rankup_material2": "暮輝石",
+      "skill_material": "嚢胞",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    },
+    "リザー": {
+      "rarity": "B",
+      "name": "リザー",
+      "ename": "Lisa",
+      "sin": "カタリシス",
+      "rankup_material1": "骨",
+      "rankup_material2": "涙石",
+      "skill_material": "涙石",
+      "naikai": "囁き",
+      "condition": {
+        "level": 1,
+        "ru1": "false",
+        "ru2": "false",
+        "ru3": "false",
+        "slv": [1, 1, 1, 1],
+        "target_slv": [10, 10, 10, 10]
+      }
+    }
+  }
+}
