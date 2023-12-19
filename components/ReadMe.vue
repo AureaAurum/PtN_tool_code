@@ -32,7 +32,8 @@ const markdown = marked(`
 # 無期迷途 素材計算機
 本サイトで引用されている『無期迷途』内の文章・画像等の著作権はZIYI GROUP HK LIMITED又は権利を有する第三者に帰属します。\n
 また、権利者様側からの画像等の削除の依頼や警告は速やかに対処いたします。\n
-バグ報告はGithub、もしくはX(旧Twitter)まで。
+2023年12月19日現在、Echoの内海素材データが入ってないので情報提供いただけると幸いです。\n
+バグ報告、機能の要望等はGithub、マシュマロ、もしくはX(旧Twitter)まで。
 
 ## 使い方
 検索欄からコンビクトを選択すると素材の必要数が計算されます。選択後のキャラをクリックするとランクアップや各スキルレベルの目標を設定できます。\n
@@ -42,7 +43,7 @@ const markdown = marked(`
 挙動が変でしたらお手数ですが当サイトのキャッシュ・データ削除をお試しください。
 
 ## 連絡先
-[GitHub](https://github.com/AureaAurum/PtN_tool_code) [X](https://twitter.com/Aurea_Aurum)
+[GitHub](https://github.com/AureaAurum/PtN_tool_code) [X](https://twitter.com/Aurea_Aurum) [マシュマロ](https://marshmallow-qa.com/1lhdgcbb5qqm1yg)
 
 ## 謝辞
 wiki\n
