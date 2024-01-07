@@ -301,10 +301,10 @@ replace:
 - after: 'エブン'
   before: 禁闭者:雷温
   index: 99
-- after: '优利卡'
+- after: 'エウレカ'
   before: 禁闭者:优利卡
   index: 100
-- after: '伊芙'
+- after: 'イヴ'
   before: 禁闭者:伊芙
   index: 101
 - after: '唐'
