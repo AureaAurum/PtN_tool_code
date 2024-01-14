@@ -325,3 +325,6 @@ replace:
 - after: '瓦尼菈'
   before: 禁闭者:瓦尼菈
   index: 107
+- after: 'Vanilla'
+  before: Vanila
+  index: 108
