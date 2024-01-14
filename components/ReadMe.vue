@@ -53,6 +53,7 @@ wiki\n
 This project is inspired by [arkntools/arknights-toolbox](https://github.com/arkntools/arknights-toolbox)
 
 # 更新履歴
+2024-01-14 追加:Vanila, Thistle。\n
 2024-01-07 翻訳追加:イヴ, エウレカ。\n
 2023-12-19 追加:Lady Pearl, Echo。翻訳追加:エブン, ニノ。コンビクト詳細画面に内海素材の表示を追加。\n
 2023-12-03 翻訳追加:マンティス, カシア。リセット機能の調整。\n

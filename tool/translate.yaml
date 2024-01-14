@@ -319,3 +319,9 @@ replace:
 - after: '珀尔夫人'
   before: 禁闭者:珀尔夫人
   index: 105
+- after: '蓟'
+  before: 禁闭者:蓟
+  index: 106
+- after: '瓦尼菈'
+  before: 禁闭者:瓦尼菈
+  index: 107
