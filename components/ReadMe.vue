@@ -32,7 +32,7 @@ const markdown = marked(`
 # 無期迷途 素材計算機
 本サイトで引用されている『無期迷途』内の文章・画像等の著作権はZIYI GROUP HK LIMITED又は権利を有する第三者に帰属します。\n
 また、権利者様側からの画像等の削除の依頼や警告は速やかに対処いたします。\n
-2023年12月19日現在、Echoの内海素材データが入ってないので情報提供いただけると幸いです。\n
+2024年2月04日現在、Echo, Thistle, Yanyanの内海素材データが入ってないので情報提供いただけると幸いです。\n
 バグ報告、機能の要望等はGithub、マシュマロ、もしくはX(旧Twitter)まで。
 
 ## 使い方
@@ -53,7 +53,8 @@ wiki\n
 This project is inspired by [arkntools/arknights-toolbox](https://github.com/arkntools/arknights-toolbox)
 
 # 更新履歴
-2024-01-14 追加:Vanila, Thistle。\n
+2024-02-02 追加:Du Ruo, Yanyan, Yao。 \n
+2024-01-14 追加:Vanilla, Thistle。\n
 2024-01-07 翻訳追加:イヴ, エウレカ。\n
 2023-12-19 追加:Lady Pearl, Echo。翻訳追加:エブン, ニノ。コンビクト詳細画面に内海素材の表示を追加。\n
 2023-12-03 翻訳追加:マンティス, カシア。リセット機能の調整。\n
