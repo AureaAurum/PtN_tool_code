@@ -328,3 +328,12 @@ replace:
 - after: 'Vanilla'
   before: Vanila
   index: 108
+- after: '曜'
+  before: 禁闭者:曜
+  index: 109
+- after: '烟烟'
+  before: 禁闭者:烟烟
+  index: 110
+- after: '杜若'
+  before: 禁闭者:杜若
+  index: 111

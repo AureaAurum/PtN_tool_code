@@ -22,7 +22,7 @@ This project is inspired by [arkntools/arknights-toolbox](https://github.com/ark
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details
 
 # 更新履歴
-2024-02-02 追加:Du Ruo, Yanyan, Yao。  
+2024-02-04 追加:Du Ruo, Yanyan, Yao。  
 2024-01-14 追加:Vanila, Thistle。  
 2024-01-07 翻訳追加:イヴ, エウレカ。  
 2023-12-19 追加:Lady Pearl, Echo。翻訳追加:エブン, ニノ。コンビクト詳細画面に内海素材の表示を追加。  
