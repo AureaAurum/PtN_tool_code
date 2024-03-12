@@ -313,10 +313,10 @@ replace:
 - after: 'マチルダ'
   before: 禁闭者:玛蒂尔达
   index: 103
-- after: '艾可'
+- after: 'アイカ'
   before: 禁闭者:艾可
   index: 104
-- after: '珀尔夫人'
+- after: 'パール夫人'
   before: 禁闭者:珀尔夫人
   index: 105
 - after: '蓟'
@@ -337,3 +337,9 @@ replace:
 - after: '杜若'
   before: 禁闭者:杜若
   index: 111
+- after: '戈蓝'
+  before: 禁闭者:戈蓝
+  index: 112
+- after: '安吉尔'
+  before: 禁闭者:安吉尔
+  index: 113

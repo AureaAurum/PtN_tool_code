@@ -10,8 +10,8 @@
         <template v-slot:prepend>
           <v-avatar style="width: 70px; height: 50px; border-radius: 20%;" tile class="my-0">
             <template v-slot:default>
-              <v-img cover :src='"/img/characters/" + characters.data[item.title].ename + ".png"'
-                :alt="characters.data[item.title].ename"></v-img>
+              <v-img cover :src='"/img/characters/" + item.raw.ename + ".png"'
+                :alt="item.title"></v-img>
             </template>
           </v-avatar>
         </template>
@@ -29,10 +29,10 @@ const items = Object.values(characters.data);
 
 
 function customfilter(itemTitle: string, queryText: string, item: any) {
-  const jName = hiraganaToKatakana(item.title);
+  const jName = hiraganaToKatakana(item.raw.name);
   const searchText = hiraganaToKatakana(queryText);
   const englishSeach = queryText.toLowerCase();
-  const eName = characters.data[item.title].ename.toLowerCase();
+  const eName = characters.data[item.raw.ename].ename.toLowerCase();
 
   return jName.indexOf(searchText) > -1 || eName.indexOf(englishSeach) > -1;
 }

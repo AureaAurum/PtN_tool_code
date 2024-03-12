@@ -57,7 +57,7 @@ if resp_tabs_container:
                 naikai = target_element.select("table:nth-child(2)>tbody>tr:nth-child(8)>td>a")[2].get_text(strip=True)
                 condition = {"level":1,"ru1":"false","ru2":"false","ru3":"false","slv":[1,1,1,1],"target_slv": [10, 10, 10, 10]}
                 character = {"rarity":rarity,"name":title,"ename":english, "sin":sin, "rankup_material1":rankup_material1,"rankup_material2":rankup_material2,"skill_material":skill_material, "naikai":naikai,"condition":condition}
-                characters[title] = character
+                characters[english] = character
 
                 currentdir = Path(__file__).parent
                 img = currentdir / f'../public/img/characters/{english}.png'
@@ -67,7 +67,7 @@ if resp_tabs_container:
                     download_image(url, f"{english}.png")
                 print(f'{title}, {english} done')
             else:
-                print(f"{title}が見つかりませんでした。")
+                print(f"{title}, {english} が見つかりませんでした。")
                 missing.append(title)
             time.sleep(1)
     print(f"missing: {missing}")
@@ -104,6 +104,6 @@ with open(r'./characters.json',"wt", encoding='utf-8') as writeParameter:
     for item in yaml['replace']:
         print(f"index:{item['index']} before:{item['before']} after:{item['after']}")
         #parameter = parameter.replace(str(item['before']),str(item['after']))
-        parameter = re.sub(str(item['before']),str(item['after']),parameter)
+        parameter = re.sub(str(item['before']+'(?![\u4E00-\u9FFF])'),str(item['after']),parameter)
     print(parameter.encode('utf-8'))
     writeParameter.write(parameter)

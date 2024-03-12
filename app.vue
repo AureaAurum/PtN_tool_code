@@ -234,7 +234,7 @@ watch(() => [...characters.selected], (after, before) => {
   if (after.length < before.length) {
     const diff = before.filter(i => after.indexOf(i) == -1);
     for (const d of diff) {
-      characters.data[d.name].condition = {
+      characters.data[d.ename].condition = {
         "level": 1,
         "ru1": "false",
         "ru2": "false",

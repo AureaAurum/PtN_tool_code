@@ -1,4 +1,6 @@
 {
   "extends": "../.nuxt/tsconfig.json",
-  "resolveJsonModule": true
+  "compilerOptions": {
+    "resolveJsonModule": true
+  },
 }

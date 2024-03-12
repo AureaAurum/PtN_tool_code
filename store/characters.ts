@@ -24,19 +24,19 @@ export const useCharacterStore = defineStore(
       refreshdate.value = new Date(json.createdDate);
       if (temp.length > 0) {
         for (const c of temp) {
-          if (!data.value[c.name]) {
-            console.log(`translated ${c.name}`);
+          if (!data.value[c.ename]) {
+            console.log(`translated ${c.ename}`);
             var translated = Object.values(data.value).find((element) => element.ename == c.ename);
             console.log(translated);
             if (translated) {
-              data.value[translated.name].condition = c.condition;
+              data.value[translated.ename].condition = c.condition;
               const index = selected.value.indexOf(c);
-              if (index >= 0) selected.value[index] = data.value[translated.name];
+              if (index >= 0) selected.value[index] = data.value[translated.ename];
             }
           } else {
-            data.value[c.name].condition = c.condition;
+            data.value[c.ename].condition = c.condition;
           }
-          //console.dir(data.value[c.name],{depth:null})
+          //console.dir(data.value[c.ename],{depth:null})
         }
       }
       console.log('characters init');
