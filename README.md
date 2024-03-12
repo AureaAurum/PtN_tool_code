@@ -22,6 +22,7 @@ This project is inspired by [arkntools/arknights-toolbox](https://github.com/ark
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details
 
 # 更新履歴
+2024-03-12 追加:Angel, Golan。  
 2024-02-04 追加:Du Ruo, Yanyan, Yao。  
 2024-01-14 追加:Vanila, Thistle。  
 2024-01-07 翻訳追加:イヴ, エウレカ。  

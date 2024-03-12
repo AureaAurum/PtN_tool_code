@@ -53,6 +53,7 @@ wiki\n
 This project is inspired by [arkntools/arknights-toolbox](https://github.com/arkntools/arknights-toolbox)
 
 # 更新履歴
+2024-03-12 追加:Angel, Golan。 \n
 2024-02-04 追加:Du Ruo, Yanyan, Yao。 \n
 2024-01-14 追加:Vanilla, Thistle。\n
 2024-01-07 翻訳追加:イヴ, エウレカ。\n
