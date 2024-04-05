@@ -32,7 +32,7 @@ const markdown = marked(`
 # 無期迷途 素材計算機
 本サイトで引用されている『無期迷途』内の文章・画像等の著作権はZIYI GROUP HK LIMITED又は権利を有する第三者に帰属します。\n
 また、権利者様側からの画像等の削除の依頼や警告は速やかに対処いたします。\n
-2024年3月12日現在、Golanの内海素材データが入ってないので情報提供いただけると幸いです。\n
+大陸版wikiにのってない内海素材は基本的にデータが入っていません。情報提供いただければ反映させます。\n
 バグ報告、機能の要望等はGithub、マシュマロ、もしくはX(旧Twitter)まで。
 
 ## 使い方
@@ -53,6 +53,7 @@ wiki\n
 This project is inspired by [arkntools/arknights-toolbox](https://github.com/arkntools/arknights-toolbox)
 
 # 更新履歴
+2024-04-05 多言語対応テスト。追加:Bianca,Shawn
 2024-03-12 追加:Angel, Golan。 \n
 2024-02-04 追加:Du Ruo, Yanyan, Yao。 \n
 2024-01-14 追加:Vanilla, Thistle。\n

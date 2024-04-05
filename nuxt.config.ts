@@ -6,10 +6,15 @@ export default defineNuxtConfig({
     '@invictus.codes/nuxt-vuetify',
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
+    '@nuxtjs/i18n',
   ],
   typescript: {
     shim: false,
     typeCheck: false,
+  },
+  i18n: {
+    /* module options */
+    vueI18n: './i18n.config.ts'
   },
   vuetify: {
     /* vuetify options */

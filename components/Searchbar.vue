@@ -5,13 +5,16 @@
     <template v-slot:chip="{ item, index, props }">
       <CharacterDetail :item="item"></CharacterDetail>
     </template>
-    <template v-slot:item="{ item, props }">
+    <template v-slot:item="{ item, props }:any">
       <v-list-item v-bind="props" class="my-0 py-0" bg-color="grey-darken-">
+        <template v-slot:title>
+          {{ $t(item.raw.name) }}
+        </template>
         <template v-slot:prepend>
           <v-avatar style="width: 70px; height: 50px; border-radius: 20%;" tile class="my-0">
             <template v-slot:default>
               <v-img cover :src='"/img/characters/" + item.raw.ename + ".png"'
-                :alt="item.title"></v-img>
+                :alt="item.raw.name"></v-img>
             </template>
           </v-avatar>
         </template>
@@ -23,13 +26,13 @@
 <script setup lang ="ts">
 import { useCharacterStore } from '@/store/characters';
 import type { Character, Characters, ChJsonData, Condition, Material } from '~/types/types';
+import { useI18n, useLocalePath } from '#imports'
+const { t } = useI18n()
 
 const characters = useCharacterStore();
 const items = Object.values(characters.data);
-
-
 function customfilter(itemTitle: string, queryText: string, item: any) {
-  const jName = hiraganaToKatakana(item.raw.name);
+  const jName = hiraganaToKatakana(t(item.raw.name));
   const searchText = hiraganaToKatakana(queryText);
   const englishSeach = queryText.toLowerCase();
   const eName = characters.data[item.raw.ename].ename.toLowerCase();

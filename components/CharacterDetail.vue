@@ -1,7 +1,7 @@
 <template>
     <v-dialog width="80%" max-width="500px" min-width="400px">
         <template v-slot:activator="{ props }">
-            <v-chip v-bind="props" @click:close="remove(p.item.raw)" :text="p.item.title" label class="bg-indigo-darken-3"></v-chip>
+            <v-chip v-bind="props" @click:close="remove(p.item.raw)" :text="$t(p.item.raw.name)" label class="bg-indigo-darken-3"></v-chip>
         </template>
         <template v-slot:default="{ isActive }">
             <v-card>
@@ -11,7 +11,7 @@
                             <v-img cover :src='"/img/characters/" + p.item.raw.ename + ".png"' :alt="p.item.raw.ename"></v-img>
                         </template>
                     </v-avatar>
-                    <div class="my-2 mx-4 me-auto">{{ p.item.title }}</div>
+                    <div class="my-2 mx-4 me-auto">{{ $t(p.item.raw.name) }}</div>
                     <div class="d-flex my-2">
                         <v-tooltip bottom :text="`ランクアップ素材1:${ p.item.raw.rankup_material1 }`" location="bottom">
                             <template v-slot:activator="{ props }">

@@ -13,6 +13,7 @@
     "@invictus.codes/nuxt-vuetify": "^0.3.0",
     "@mdi/js": "^7.3.67",
     "@nuxt/devtools": "latest",
+    "@nuxtjs/i18n": "^8.0.0",
     "eslint": "^8.50.0",
     "nuxt": "^3.7.3",
     "sass": "^1.68.0",

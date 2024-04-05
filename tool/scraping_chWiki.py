@@ -3,6 +3,10 @@ from pathlib import Path
 import json
 import time
 from bs4 import BeautifulSoup
+import datetime
+import yaml
+import re
+
 
 # スクレイピングしたいURL
 url = 'https://wiki.biligame.com/wqmt/%E9%A6%96%E9%A1%B5'
@@ -15,8 +19,11 @@ soup = BeautifulSoup(response.text, 'html.parser')
 
 # classがresp-tabs-containerの要素を取得
 resp_tabs_container = soup.find('div', class_='resp-tabs-container')
+currentdir = Path(__file__).parent
 
 characters = {}
+en = {}
+zh = {}
 
 def download_image(url, file_path):
   r = requests.get(url, stream=True)
@@ -36,7 +43,7 @@ if resp_tabs_container:
         if a_element:
             href = a_element.get('href')
             url = "https://wiki.biligame.com/" + href
-            title = a_element.get('title')
+            title = a_element.find('span').text
             response = requests.get(url)
 
             # ページのコンテンツをBeautiful Soupで解析
@@ -56,15 +63,17 @@ if resp_tabs_container:
                 skill_material = target_element.select("table:nth-child(2)>tbody>tr:nth-child(4)>td>a")[1].get_text(strip=True)
                 naikai = target_element.select("table:nth-child(2)>tbody>tr:nth-child(8)>td>a")[2].get_text(strip=True)
                 condition = {"level":1,"ru1":"false","ru2":"false","ru3":"false","slv":[1,1,1,1],"target_slv": [10, 10, 10, 10]}
-                character = {"rarity":rarity,"name":title,"ename":english, "sin":sin, "rankup_material1":rankup_material1,"rankup_material2":rankup_material2,"skill_material":skill_material, "naikai":naikai,"condition":condition}
+                character = {"rarity":rarity,"name":english,"ename":english, "sin":sin, "rankup_material1":rankup_material1,"rankup_material2":rankup_material2,"skill_material":skill_material, "naikai":naikai,"condition":condition}
                 characters[english] = character
+                en[english] = english
+                zh[english] = title
 
-                currentdir = Path(__file__).parent
+
                 img = currentdir / f'../public/img/characters/{english}.png'
                 if not img.exists():
                     print("image downloading...")
                     url = target_element3.get('src')
-                    download_image(url, f"{english}.png")
+                    download_image(url, currentdir / f'../public/img/characters/{english}.png')
                 print(f'{title}, {english} done')
             else:
                 print(f"{title}, {english} が見つかりませんでした。")
@@ -74,8 +83,10 @@ if resp_tabs_container:
 else:
     print("指定されたクラスが見つかりませんでした。")
 
-import datetime
 if  any(characters):
+
+    characters["Echo"]["naikai"]="狂念"
+
     # 現在の日付と時刻を取得
     current_datetime = datetime.datetime.now()
     # 現在の日付と時刻を文字列に変換
@@ -83,22 +94,26 @@ if  any(characters):
     chjson = {}
     chjson["createdDate"] = current_datetime_str
     chjson["Characters"] = characters
-    path = './characters.json'
+    path = currentdir / r'../public/json/characters.json'
     json_file = open(path, mode="w", encoding='UTF-8')
     json.dump(chjson, json_file, indent=2, ensure_ascii=False)
     json_file.close()
+    enpath = currentdir / r'../locales/en.json'
+    en_file = open(enpath, mode="w", encoding='UTF-8')
+    json.dump(en, en_file, indent=2, ensure_ascii=False)
+    en_file.close()
+    zhpath = currentdir / r'../locales/zh.json'
+    zh_file = open(zhpath, mode="w", encoding='UTF-8')
+    json.dump(zh, zh_file, indent=2, ensure_ascii=False)
+    zh_file.close()
 
-
-import yaml
-import re
-
-with open(r'./translate.yaml', encoding='utf-8') as readYaml:
+with open(currentdir / r'./translate.yaml', encoding='utf-8') as readYaml:
     yaml = yaml.load(readYaml, Loader=yaml.Loader)
 
-with open(r'./characters.json',"rt", encoding='utf-8') as readParameter:
+with open(currentdir / r'../public/json/characters.json',"rt", encoding='utf-8') as readParameter:
     parameter = readParameter.read()
 
-with open(r'./characters.json',"wt", encoding='utf-8') as writeParameter:
+with open(currentdir / r'../public/json/characters.json',"wt", encoding='utf-8') as writeParameter:
     print(parameter.encode('utf-8'))
 
     for item in yaml['replace']:

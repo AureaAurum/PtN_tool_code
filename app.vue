@@ -3,6 +3,7 @@
     <v-app-bar :elevation="2" color="indigo darken-4">
       <v-app-bar-title>無期迷途 育成素材計算機</v-app-bar-title>
       <v-spacer></v-spacer>
+      <i18n></i18n>
       <ReadMe></ReadMe>
     </v-app-bar>
     <v-main class="text-shades-white ma-5" style="min-width: 500px !important;">
@@ -37,7 +38,8 @@
         </v-row>
       </v-container>
       <v-container class="d-flex flex-wrap align-content-start justify-start">
-        <Material class="ma-2" style="max-width: 200px;" v-for=" (material, index) in filteredMaterials" :class="{ 'left-align': isLastRow(index) }" :mat="material" :prev="prevMaterials(material)" :hideEnoughMaterials="materialstore.hideEnoughMaterials"></Material>
+        <Material class="ma-2" style="max-width: 200px;" v-for=" (material, index) in filteredMaterials" :class="{ 'left-align': isLastRow(index) }" :mat="material" :prev="prevMaterials(material)"
+          :hideEnoughMaterials="materialstore.hideEnoughMaterials"></Material>
       </v-container>
     </v-main>
   </v-app>
@@ -47,6 +49,8 @@ import { useCharacterStore } from '@/store/characters';
 import { useMaterialStore } from '@/store/material';
 import { useDisplay } from "vuetify";
 import type { Character, Characters, ChJsonData, Condition, Material } from '~/types/types';
+const { locale, setLocale } = useI18n();
+
 
 const display = useDisplay();
 
@@ -265,7 +269,7 @@ async function ownreset() {
   }
 }
 async function needreset() {
-  characters.selected = []
+  characters.selected = [];
 }
 
 
@@ -353,7 +357,7 @@ const isLastRow = (index: number) => {
 </script>
 
 <style>
-body{
+body {
   background-color: #212121 !important;
 }
 </style>
