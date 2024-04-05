@@ -7,7 +7,7 @@ export default defineI18nConfig(() => ({
     locale:"ja",
     defaultLocale: "ja",
     locales: ['ja','en','zh'],
-    fallbackLocale :'zh',
+    fallbackLocale :'en',
     messages: {
       en,
       ja,
