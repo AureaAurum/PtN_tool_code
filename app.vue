@@ -50,28 +50,12 @@ import { useMaterialStore } from '@/store/material';
 import { useDisplay } from "vuetify";
 import type { Character, Characters, ChJsonData, Condition, Material } from '~/types/types';
 const { locale, setLocale } = useI18n();
-
-
 const display = useDisplay();
-
-
 const materialstore = useMaterialStore();
+
 if (Object.keys(materialstore.categories).length === 0) {
   await materialstore.init();
 }
-
-
-const characters = useCharacterStore();
-const json: ChJsonData = await $fetch('/json/characters.json?url');
-const now = new Date(json.createdDate);
-let compdate = new Date(characters.refreshdate);
-console.log(`storeDate: ${compdate} \n now: ${now}`);
-if (compdate < now) {
-  await characters.init();
-  await materialstore.init();
-  console.log("データを更新しました");
-}
-
 const prevMaterials = (material: Material) => {
   return materialstore.categories[material.category].slice(materialstore.categories[material.category].indexOf(material) + 1);
 };
@@ -90,7 +74,8 @@ function requirednum(category: string) {
 
 
 const calcMaterial = (character: Character) => {
-  const { rarity, sin, rankup_material1: rum1, rankup_material2: rum2, skill_material: sm, naikai, condition } = character;
+  const { rarity, sin, rankup_material1: rum1, rankup_material2: rum2, skill_material: sm, naikai } = characters.data[character.ename];
+  const { condition } = character;
   //console.log(`${[character.name, rarity, sin, rum1, rum2, sm, naikai]}`);
   if (Object.keys(materialstore.categories).length === 0) {
     console.error('empty materials');
@@ -227,6 +212,40 @@ const calcMaterial = (character: Character) => {
     }
   }
 };
+
+const characters = useCharacterStore();
+const json: ChJsonData = await $fetch('/json/characters.json?url');
+const now = new Date(json.createdDate);
+let compdate = new Date(characters.refreshdate);
+console.log(`storeDate: ${compdate} \n now: ${now}`);
+if (compdate < now) {
+  await characters.init();
+  await materialstore.init();
+
+  var temp: Character[] = [];
+  if (characters.selected) {
+    temp = characters.selected;
+  }
+
+  if (temp.length > 0) {
+    for (const category of Object.values<Material[]>(materialstore.categories)) {
+      for (const material of category) {
+        material.required = "";
+      }
+    }
+
+    for (const c of temp) {
+      characters.data[c.ename].condition = c.condition;
+      const index = characters.selected.indexOf(c);
+      if (index >= 0) characters.selected[index] = characters.data[c.ename];
+      calcMaterial(c);
+    }
+  }
+
+  console.log("データを更新しました");
+}
+
+
 
 
 watch(() => [...characters.selected], (after, before) => {

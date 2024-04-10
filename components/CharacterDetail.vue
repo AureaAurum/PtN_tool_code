@@ -150,7 +150,6 @@ function reCalc(item: Character) {
     const index = characters.selected.indexOf(item);
     if (index >= 0) characters.selected.splice(index, 1);
     characters.selected.push(item);
-    characters.data[item.ename] = item;
     console.log(item);
 }
 </script>
