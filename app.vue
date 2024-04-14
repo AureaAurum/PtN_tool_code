@@ -2,45 +2,58 @@
   <v-app theme="dark" id="PtNtool" class="bg-grey-darken-4">
     <v-app-bar :elevation="2" color="indigo darken-4">
       <v-app-bar-title>無期迷途 育成素材計算機</v-app-bar-title>
+      <v-tabs v-model="tab">
+        <v-tab value="Main">Main</v-tab>
+        <v-tab value="CList">List</v-tab>
+      </v-tabs>
       <v-spacer></v-spacer>
       <i18n></i18n>
       <ReadMe></ReadMe>
     </v-app-bar>
     <v-main class="text-shades-white ma-5" style="min-width: 500px !important;">
-      <v-container fluid class="bg-grey-darken-3">
-        <v-row>
-          <v-btn width="100px" height="40px" color="#000000" disabled rounded="0" class="my-2 mr-3" text="検索"></v-btn>
-          <Searchbar style="position: relative; top:-6px"></Searchbar>
-        </v-row>
-        <v-row>
-          <v-btn width="100px" height="40px" color="#000000" disabled rounded="0" class="my-2 mr-3" text="フィルタ"></v-btn>
-          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('ディスコイン')" :class="{ 'active': isSelected('ディスコイン') }">ディスコイン</v-btn>
-          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('箱')" :class="{ 'active': isSelected('箱') }">箱</v-btn>
-          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('モジュール')" :class="{ 'active': isSelected('モジュール') }">モジュール</v-btn>
-          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('原素')" :class="{ 'active': isSelected('原素') }">原素</v-btn>
-          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('コア')" :class="{ 'active': isSelected('コア') }">コア</v-btn>
-          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('内海')" :class="{ 'active': isSelected('内海') }">内海</v-btn>
-          <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleRequiredMaterials()" :class="{ 'active': materialstore.showRequiredMaterials }">不要素材</v-btn>
-        </v-row>
-        <v-row>
-          <v-btn height="40px" width="100px" color="#000000" disabled rounded="0" class="my-2 mr-3" text="オプション"></v-btn>
-          <v-tooltip bottom text="素材の所持数をリセットします" location="bottom">
-            <template v-slot:activator="{ props }">
-              <VBtn width="140px" height="40px" dark v-bind="props" class="bg-red-darken-2 my-2 mx-1 pa-2" @click="ownreset()" text="所持数のリセット"></VBtn>
-            </template>
-          </v-tooltip>
-          <v-tooltip bottom text="素材の必要数と選択コンビクトをリセットします" location="bottom">
-            <template v-slot:activator="{ props }">
-              <VBtn width="140px" height="40px" dark v-bind="props" class="bg-red-darken-2 my-2 mx-1 pa-2" @click="needreset()" text="必要数のリセット"></VBtn>
-            </template>
-          </v-tooltip>
-          <v-switch color="indigo-accent-2" v-model="materialstore.hideEnoughMaterials" hide-details class="my-0 mx-5 pa-0" label="収集済み素材を半透明に"></v-switch>
-        </v-row>
-      </v-container>
-      <v-container class="d-flex flex-wrap align-content-start justify-start">
-        <Material class="ma-2" style="max-width: 200px;" v-for=" (material, index) in filteredMaterials" :class="{ 'left-align': isLastRow(index) }" :mat="material" :prev="prevMaterials(material)"
-          :hideEnoughMaterials="materialstore.hideEnoughMaterials"></Material>
-      </v-container>
+      <v-window v-model="tab">
+        <v-window-item value="Main" transition="scroll-x">
+          <v-container fluid class="bg-grey-darken-3">
+            <v-row>
+              <v-btn width="100px" height="40px" color="#000000" disabled rounded="0" class="my-2 mr-3" text="検索"></v-btn>
+              <Searchbar style="position: relative; top:-6px"></Searchbar>
+            </v-row>
+            <v-row>
+              <v-btn width="100px" height="40px" color="#000000" disabled rounded="0" class="my-2 mr-3" text="フィルタ"></v-btn>
+              <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('ディスコイン')" :class="{ 'active': isSelected('ディスコイン') }">ディスコイン</v-btn>
+              <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('箱')" :class="{ 'active': isSelected('箱') }">箱</v-btn>
+              <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('モジュール')" :class="{ 'active': isSelected('モジュール') }">モジュール</v-btn>
+              <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('原素')" :class="{ 'active': isSelected('原素') }">原素</v-btn>
+              <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('コア')" :class="{ 'active': isSelected('コア') }">コア</v-btn>
+              <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('内海')" :class="{ 'active': isSelected('内海') }">内海</v-btn>
+              <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleRequiredMaterials()" :class="{ 'active': materialstore.showRequiredMaterials }">不要素材</v-btn>
+            </v-row>
+            <v-row>
+              <v-btn height="40px" width="100px" color="#000000" disabled rounded="0" class="my-2 mr-3" text="オプション"></v-btn>
+              <v-tooltip bottom text="素材の所持数をリセットします" location="bottom">
+                <template v-slot:activator="{ props }">
+                  <VBtn width="140px" height="40px" dark v-bind="props" class="bg-red-darken-2 my-2 mx-1 pa-2" @click="ownreset()" text="所持数のリセット"></VBtn>
+                </template>
+              </v-tooltip>
+              <v-tooltip bottom text="素材の必要数と選択コンビクトをリセットします" location="bottom">
+                <template v-slot:activator="{ props }">
+                  <VBtn width="140px" height="40px" dark v-bind="props" class="bg-red-darken-2 my-2 mx-1 pa-2" @click="needreset()" text="必要数のリセット"></VBtn>
+                </template>
+              </v-tooltip>
+              <v-switch color="indigo-accent-2" v-model="materialstore.hideEnoughMaterials" hide-details class="my-0 mx-5 pa-0" label="収集済み素材を半透明に"></v-switch>
+            </v-row>
+          </v-container>
+          <v-container class="d-flex flex-wrap align-content-start justify-start">
+            <Material class="ma-2" style="max-width: 200px;" v-for=" (material, index) in filteredMaterials" :class="{ 'left-align': isLastRow(index) }" :mat="material" :prev="prevMaterials(material)"
+              :hideEnoughMaterials="materialstore.hideEnoughMaterials"></Material>
+          </v-container>
+        </v-window-item>
+        <v-window-item value="CList" reverse-transition="scroll-x">
+          <v-container>
+            <CharacterList></CharacterList>
+          </v-container>
+        </v-window-item>
+      </v-window>
     </v-main>
   </v-app>
 </template>
@@ -52,6 +65,8 @@ import type { Character, Characters, ChJsonData, Condition, Material } from '~/t
 const { locale, setLocale } = useI18n();
 const display = useDisplay();
 const materialstore = useMaterialStore();
+var tab:any = ref(null);
+
 
 if (Object.keys(materialstore.categories).length === 0) {
   await materialstore.init();

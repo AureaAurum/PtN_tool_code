@@ -98,11 +98,11 @@ if  any(characters):
     json_file = open(path, mode="w", encoding='UTF-8')
     json.dump(chjson, json_file, indent=2, ensure_ascii=False)
     json_file.close()
-    enpath = currentdir / r'../locales/en.json'
+    enpath = currentdir / r'../locales/en/en_characters.json'
     en_file = open(enpath, mode="w", encoding='UTF-8')
     json.dump(en, en_file, indent=2, ensure_ascii=False)
     en_file.close()
-    zhpath = currentdir / r'../locales/zh.json'
+    zhpath = currentdir / r'../locales/zh/zh_characters.json'
     zh_file = open(zhpath, mode="w", encoding='UTF-8')
     json.dump(zh, zh_file, indent=2, ensure_ascii=False)
     zh_file.close()
