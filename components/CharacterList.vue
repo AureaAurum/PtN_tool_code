@@ -2,17 +2,17 @@
   <v-data-table :items="filterdItems" item-key="name" :headers="headers" :items-per-page="-1">
     <template v-slot:headers>
       <tr>
-        <th v-for="header of headers ">{{ header.title }}</th>
+        <th v-for="header of headers ">{{ $t(header.title) }}</th>
       </tr>
       <tr>
-        <td>
+        <th>
           <v-text-field v-model="search" density="compact" hide-details flat></v-text-field>
-        </td>
-        <td> <v-select v-model="SinValue" :items="sinname" density="compact" hide-details flat /></td>
-        <td> <v-select v-model="RUM1Value" :items="matname" density="compact" hide-details flat /></td>
-        <td> <v-select v-model="RUM2Value" :items="matname" density="compact" hide-details flat /></td>
-        <td> <v-select v-model="SUMValue" :items="matname" density="compact" hide-details flat /></td>
-        <td> <v-select v-model="NaikaiValue" :items="naikainame" density="compact" hide-details flat /></td>
+        </th>
+        <th> <v-select v-model="SinValue" :items="sinname" density="compact" hide-details flat /></th>
+        <th> <v-select v-model="RUM1Value" :items="matname" density="compact" hide-details flat /></th>
+        <th> <v-select v-model="RUM2Value" :items="matname" density="compact" hide-details flat /></th>
+        <th> <v-select v-model="SUMValue" :items="matname" density="compact" hide-details flat /></th>
+        <th> <v-select v-model="NaikaiValue" :items="naikainame" density="compact" hide-details flat /></th>
       </tr>
     </template>
     <template v-slot:item.rankup_material1="{ item }">
@@ -63,12 +63,12 @@ const naikai = (naikai: string) => {
 
 
 const headers: any = [
-  { title: t('$tableHeaderCharacter'), key: 'name', value: (item: { name: any; }) => t(item.name), align: 'start', sortable: false },
-  { title: t('$tableHeaderSin'), key: 'sin', value: (item: { sin: any; }) => t(item.sin), align: 'start', sortable: false },
-  { title: t('$tableHeaderRUM1'), key: 'rankup_material1', sortable: true },
-  { title: t('$tableHeaderRUM2'), key: 'rankup_material2', sortable: true },
-  { title: t('$tableHeaderSUM'), key: 'skill_material', sortable: true },
-  { title: t('$tableHeaderNaikai'), key: 'naikai', value: 'naikai', sortable: true },
+  { title:'$tableHeaderCharacter', key: 'name', value: (item: { name: any; }) => t(item.name), align: 'start', sortable: false },
+  { title:'$tableHeaderSin', key: 'sin', value: (item: { sin: any; }) =>t(item.sin), align: 'start', sortable: false },
+  { title:'$tableHeaderRUM1', key: 'rankup_material1', sortable: true },
+  { title:'$tableHeaderRUM2', key: 'rankup_material2', sortable: true },
+  { title:'$tableHeaderSUM', key: 'skill_material', sortable: true },
+  { title:'$tableHeaderNaikai', key: 'naikai', value: 'naikai', sortable: true },
 ];
 
 const filterdItems = computed(() => {
