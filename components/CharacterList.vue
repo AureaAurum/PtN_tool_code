@@ -9,6 +9,7 @@
           <v-text-field v-model="search" density="compact" hide-details flat></v-text-field>
         </th>
         <th> <v-select v-model="SinValue" :items="sinname" density="compact" hide-details flat /></th>
+        <th> <v-select v-model="RareValue" :items="rarename" density="compact" hide-details flat /></th>
         <th> <v-select v-model="RUM1Value" :items="matname" density="compact" hide-details flat /></th>
         <th> <v-select v-model="RUM2Value" :items="matname" density="compact" hide-details flat /></th>
         <th> <v-select v-model="SUMValue" :items="matname" density="compact" hide-details flat /></th>
@@ -48,6 +49,9 @@ const matname: string[] = ["", ...Object.keys(materialstore.categories).slice(1,
 const SinValue = ref('');
 const sinname: string[] = ["", "エンデュア", "フューリー", "アンブラ", "レチクル", "アーケイン", "カタリシス"];
 
+const RareValue = ref('');
+const rarename: string[] = ["", "S", "A", "B"];
+
 const RUM1Value = ref('');
 const RUM2Value = ref('');
 const SUMValue = ref('');
@@ -65,6 +69,7 @@ const naikai = (naikai: string) => {
 const headers: any = [
   { title:'$tableHeaderCharacter', key: 'name', value: (item: { name: any; }) => t(item.name), align: 'start', sortable: false },
   { title:'$tableHeaderSin', key: 'sin', value: (item: { sin: any; }) =>t(item.sin), align: 'start', sortable: false },
+  { title:'$tableHeaderRarity', key: 'rarity', sortable: true },
   { title:'$tableHeaderRUM1', key: 'rankup_material1', sortable: true },
   { title:'$tableHeaderRUM2', key: 'rankup_material2', sortable: true },
   { title:'$tableHeaderSUM', key: 'skill_material', sortable: true },
@@ -79,6 +84,7 @@ const filterdItems = computed(() => {
       (RUM1Value.value === '' || item.rankup_material1 === RUM1Value.value) &&
       (RUM2Value.value === '' || item.rankup_material2 === RUM2Value.value) &&
       (SUMValue.value === '' || item.skill_material === SUMValue.value) &&
+      (RareValue.value === '' || item.rarity === RareValue.value) &&
       customfilter(item.name, search.value, item)
     );
   });

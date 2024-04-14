@@ -1,6 +1,7 @@
 {
     "$tableHeaderCharacter": "Name",
     "$tableHeaderSin": "Tendency",
+    "$tableHeaderRarity": "Rarity",
     "$tableHeaderRUM1": "Rank UP Material 1",
     "$tableHeaderRUM2": "Rank UP Material 2",
     "$tableHeaderSUM": "Skill UP Material",

@@ -1,6 +1,7 @@
 {
     "$tableHeaderCharacter": "コンビクト",
     "$tableHeaderSin": "職業",
+    "$tableHeaderRarity": "レアリティ",
     "$tableHeaderRUM1": "ランクアップ素材 1",
     "$tableHeaderRUM2": "ランクアップ素材  2",
     "$tableHeaderSUM": "スキル素材",
