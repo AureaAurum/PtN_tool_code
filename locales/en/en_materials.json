@@ -1,1 +1,127 @@
-{}
+{
+    "ディスコイン": "DisCoin",
+    "涙石": "Tear",
+    "触手": "Tentacle",
+    "氷": "Ice",
+    "角": "Horn",
+    "骨": "Bone",
+    "鞘翅": "Elytra",
+    "毒砂": "Arsenopyrite",
+    "嚢胞": "Cyst",
+    "赤石": "Red",
+    "ゲル": "Gel",
+    "曲銅": "Bronze",
+    "暮輝石": "Twilight",
+    "箱": "Supply Chest",
+    "エンデュア原素": "Endura Elemental Fluid",
+    "フューリー原素": "Fury Elemental Fluid",
+    "アンブラ原素": "Umbra Elemental Fluid",
+    "レチクル原素": "Reticle Elemental Fluid",
+    "アーケイン原素": "Arcane Elemental Fluid",
+    "カタリシス原素": "Catalyst Elemental Fluid",
+    "モジュール": "Skill Module",
+    "内海": "DisSea Relic",
+    "コア": "Consciousness Crystal",
+    "囁き": "Raving",
+    "亡骸": "Corpses",
+    "狂念": "Furor",
+
+    "涙石の原鉱": "Tear Stone Raw Ore",
+    "涙石の精鉱": "Tear Stone Concentrate",
+    "涙晶": "Tear Crystal",
+    "霧涙晶クラスター": "Misty Tear Crystal",
+
+    "枯れた触手": "Shriveled Tentacle",
+    "原生触手": "Organic Tentacle",
+    "感染された触手": "Infected Tentacle",
+    "異化ミミック触手": "Mutated Monstrous Tentacle",
+
+    "氷の原鉱": "Ice Stone Raw Ore",
+    "氷の精鉱": "Ice Stone Concentrate",
+    "氷晶": "Ice Crystal",
+    "氷晶クラスター": "Cracked Ice Crystal",
+
+    "折れた角": "Broken Horn",
+    "原生の角": "Organic Horn",
+    "感染された角": "Infected Horn",
+    "異化棘状角": "Mutated Spinous Horn",
+
+    "破損した骨": "Broken Bone Shard",
+    "原生の骨": "Organic Bone Shard",
+    "感染された骨": "Infected Bone Shard",
+    "異化骨棘": "Mutated Spiked Bone Shard",
+
+    "鞘翅の破片": "Elytra Shard",
+    "原生鞘翅": "Organic Elytra",
+    "感染鞘翅": "Infected Elytra",
+    "影の異化鞘翅": "Mutated Ghastly Shadow Elytra",
+
+    "毒砂の原鉱": "Arsenopyrite Raw Ore",
+    "毒砂の精鉱": "Arsenopyrite Concentrate",
+    "毒砂結晶": "Arsenopyrite Crystal",
+    "結露毒砂結晶": "Frosted Arsenopyrite Crystal",
+
+    "破損した嚢胞": "Broken Cyst",
+    "原生嚢胞": "Organic Cyst",
+    "感染された嚢胞": "Infected Cyst",
+    "真紅の異化嚢胞": "Mutated Red Cyst",
+
+    "赤石の原鉱": "Red Stone Raw Ore",
+    "赤石の精鉱": "Red Stone Concentrate",
+    "赤の結晶": "Red Crystal",
+    "血晶クラスター": "Blood Red Crystal",
+
+    "懸濁ゲル": "Condense Gel",
+    "原生ゲル": "Organic Gel",
+    "感染されたゲル": "Infected Gel",
+    "異化暗黒ゲル": "Mutated Dark Gel",
+
+    "曲銅の原鉱":"Bronze Raw Ore",
+    "曲銅の精鉱":"Bronze Concentrate",
+    "曲銅結晶": "Bronze Crystal",
+    "曲銅結晶クラスター": "Radiant Bronze Crystal",
+
+    "暮輝石の原鉱": "Twilight Stone Raw Ore",
+    "暮輝石の精鉱": "Twilight Stone Concentrate",
+    "暮輝結晶": "Twilight Crystal",
+    "崩壊暮輝結晶": "Decaying Twilight Crystal",
+
+    "低ランク素材補給箱": "Low-Level Supply Chest",
+    "中ランク素材補給箱": "Mid-Level Supply Chest",
+    "高ランク素材補給箱": "High-Level Supply Chest",
+    "最高ランク素材補給箱": "Super-Level Supply Chest",
+
+    "ランク1エンデュア原素": "Phase 1  Endura",
+    "ランク2エンデュア原液": "Phase 2  Endura",
+    "ランク3エンデュア原質": "Phase 3  Endura",
+
+    "ランク1フューリー原素": "Phase 1 Fury",
+    "ランク2フューリー原液": "Phase 2 Fury",
+    "ランク3フューリー原質": "Phase 3 Fury",
+
+    "ランク1アンブラ原素": "Phase 1 Umbra",
+    "ランク2アンブラ原液": "Phase 2 Umbra",
+    "ランク3アンブラ原質": "Phase 3 Umbra",
+
+    "ランク1レチクル原素": "Phase 1 Reticle",
+    "ランク2レチクル原液": "Phase 2 Reticle",
+    "ランク3レチクル原質": "Phase 3 Reticle",
+
+    "ランク1アーケイン原素": "Phase 1 Arcane",
+    "ランク2アーケイン原液": "Phase 2 Arcane",
+    "ランク3アーケイン原質": "Phase 3 Arcane",
+
+    "ランク1カタリシス原素": "Phase 1 Catalyst",
+    "ランク2カタリシス原液": "Phase 2 Catalyst",
+    "ランク3カタリシス原質": "Phase 3 Catalyst",
+
+    "スキルモジュールⅠ": "Skill Module Ⅰ",
+    "スキルモジュールⅡ": "Skill Module Ⅱ",
+    "スキルモジュールⅢ": "Skill Module Ⅲ",
+    "スキルモジュールⅣ": "Skill Module Ⅳ",
+
+    "内海の囁き": "DisSea Raving",
+    "内海の亡骸": "DisSea Corpses",
+    "内海の狂念": "DisSea Furor",
+    "意識コア": "Consciousness Crystal"
+}

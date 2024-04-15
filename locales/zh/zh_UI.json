@@ -1,0 +1,19 @@
+{
+    "$tableHeaderCharacter": "姓名",
+    "$tableHeaderSin": "职业",
+    "$tableHeaderRarity": "危险评级",
+    "$tableHeaderRUM1": "升阶材料 1",
+    "$tableHeaderRUM2": "升阶材料 2",
+    "$tableHeaderSUM": "技能材料",
+    "$tableHeaderNaikai": "内海遗物",
+    "$rare":"",
+    "$rareS":"狂",
+    "$rareA":"危",
+    "$rareB":"普",
+    "カタリシス":"启迪",
+    "エンデュア":"坚韧",
+    "アンブラ":"诡秘",
+    "フューリー":"狂暴",
+    "レチクル":"精准",
+    "アーケイン":"异能"
+}

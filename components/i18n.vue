@@ -10,11 +10,11 @@
 </template>
 
   <script setup lang="ts">
-  const { locale, setLocale } = useI18n();
+  const { setLocale } = useI18n();
   const languages = [
     { title: 'En', value: 'en' },
     { title: 'Ja', value: 'ja' },
-    { title: 'Zh', value: 'zh' },
+    //{ title: 'Zh', value: 'zh' },
   ];
   const selected = (lang: any) => {
     setLocale(lang.id);

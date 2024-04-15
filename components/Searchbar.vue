@@ -1,6 +1,6 @@
 <template>
   <VAutocomplete base-color="grey-darken-1" color="grey-darken-3" item-color="white" hide-details
-    hide-no-data clearable flat closable-chips multiple placeholder="コンビクト名で検索" :items="items" item-title="name"
+    hide-no-data clearable flat closable-chips multiple placeholder="" :items="items" item-title="name"
     return-object v-model="characters.selected" :custom-filter="customfilter" variant="underlined">
     <template v-slot:chip="{ item, index, props }">
       <CharacterDetail :item="item"></CharacterDetail>

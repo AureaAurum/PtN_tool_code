@@ -3,14 +3,14 @@
         class="d-flex justify-space-around align-center materialCard">
         <div class="matImages">
             <v-img :src="'/img/materials/' + mat.id + '.png'" aspect-ratio="1" height="60px" width="60px"></v-img>
-            <div :style="name" class="name">{{ mat.name }}</div>
+            <div :style="name" class="name">{{ $t(mat.name) }}</div>
         </div>
         <div style="width: 60px;">
-            <v-text-field bg-color="grey-darken-4" hide-details type="number" density="compact" placeholder="必要"
+            <v-text-field bg-color="grey-darken-4" hide-details type="number" density="compact" :placeholder="$t('$need')"
                 v-model.number="mat.required"></v-text-field>
-            <v-text-field bg-color="grey-darken-4" hide-details type="number" density="compact" placeholder="所持"
+            <v-text-field bg-color="grey-darken-4" hide-details type="number" density="compact" :placeholder="$t('$owned')"
                 v-model.number="mat.owned"></v-text-field>
-            <v-text-field bg-color="grey-darken-4" hide-details density="compact" disabled placeholder="不足"
+            <v-text-field bg-color="grey-darken-4" hide-details density="compact" disabled placeholder=""
                 v-model="shortage"></v-text-field>
         </div>
 
@@ -21,6 +21,7 @@
 import { ref, computed } from 'vue';
 import { useMaterialStore } from '@/store/material';
 import type { Categories, Material } from '@/types/types'
+const { locale,t } = useI18n();
 
 const materialstore = useMaterialStore();
 
@@ -61,9 +62,11 @@ const color = computed(() => {
 });
 
 const name = computed(() => {
-  const length = props.mat.name.length;
-  var namefont = length > 9 ? "8px" : "12px";
-  return { '--namefont': namefont };
+  const length = t(props.mat.name).length;
+  const maxlength = locale.value == "en" ? 15 : 9;
+  var namefont = length > maxlength ? "9px" : "12px";
+  var wrap = length > maxlength ? "wrap" : "nowrap";
+  return { '--namefont': namefont, '--wrap': wrap};
 });
 
 const shortage = computed(() => {
@@ -117,6 +120,7 @@ const shortage = computed(() => {
     margin-top: 10px;
     min-width: 60px;
     font-size: var(--namefont) !important;
-}
+    text-wrap: var(--wrap) !important;
+  }
 
 </style>

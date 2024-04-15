@@ -6,6 +6,7 @@ import LocaleJaMaterials from './ja/ja_materials.json';
 import LocaleJaUI from './ja/ja_UI.json';
 import LocaleZhCharacters from './zh/zh_characters.json';
 import LocaleZhMaterials from './zh/zh_materials.json';
+import LocaleZhUI from './zh/zh_UI.json';
 
 export default {
     en:{
@@ -20,6 +21,7 @@ export default {
     },
     zh:{
         ...LocaleZhCharacters,
-        ...LocaleZhMaterials
+        ...LocaleZhMaterials,
+        ...LocaleZhUI
     }
 }

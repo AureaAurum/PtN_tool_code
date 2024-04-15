@@ -13,22 +13,22 @@
                     </v-avatar>
                     <div class="my-2 mx-4 me-auto">{{ $t(p.item.raw.name) }}</div>
                     <div class="d-flex my-2">
-                        <v-tooltip bottom :text="`ランクアップ素材1:${ p.item.raw.rankup_material1 }`" location="bottom">
+                        <v-tooltip bottom :text="`${$t('$tableHeaderRUM1')}:${ $t(p.item.raw.rankup_material1) }`" location="bottom">
                             <template v-slot:activator="{ props }">
                                 <v-img v-bind="props" :src="'/img/materials/' + materialstore.categories[p.item.raw.rankup_material1][3].id + '.png'" aspect-ratio="1" height="30px" width="30px"></v-img>
                             </template>
                         </v-tooltip>
-                        <v-tooltip bottom :text="`ランクアップ素材2:${ p.item.raw.rankup_material2 }`" location="bottom">
+                        <v-tooltip bottom :text="`${$t('$tableHeaderRUM2')}:${ $t(p.item.raw.rankup_material2) }`" location="bottom">
                             <template v-slot:activator="{ props }">
                                 <v-img v-bind="props" :src="'/img/materials/' + materialstore.categories[p.item.raw.rankup_material2][3].id + '.png'" aspect-ratio="1" height="30px" width="30px"></v-img>
                             </template>
                         </v-tooltip>
-                        <v-tooltip bottom :text="`スキルアップ素材:${ p.item.raw.skill_material }`" location="bottom">
+                        <v-tooltip bottom :text="`${$t('$tableHeaderSUM')}:${ $t(p.item.raw.skill_material) }`" location="bottom">
                             <template v-slot:activator="{ props }">
                                 <v-img v-bind="props" :src="'/img/materials/' + materialstore.categories[p.item.raw.skill_material][3].id + '.png'" aspect-ratio="1" height="30px" width="30px"></v-img>
                             </template>
                         </v-tooltip>
-                        <v-tooltip bottom :text="`内海素材:${ p.item.raw.naikai }`" location="bottom">
+                        <v-tooltip bottom :text="`${$t('$tableHeaderNaikai')}:${ $t(p.item.raw.naikai) }`" location="bottom">
                             <template v-slot:activator="{ props }" v-if="show">
                                 <v-img v-bind="props" :src="'/img/materials/' + materialstore.categories['内海'][nID].id + '.png'" aspect-ratio="1" height="30px" width="30px"></v-img>
                             </template>
@@ -40,29 +40,29 @@
                         <v-row>
                             <v-col>
                                 <div>
-                                    <span style="font-size: 8px;">RU済みならチェックしてください</span>
+                                    <span style="font-size: 10px;">{{$t('$checkoff')}}</span>
                                     <v-checkbox color="indigo-lighten-1" v-model="p.item.raw.condition.ru1" @input="reCalc(p.item.raw)" :disabled="(p.item.raw.condition.ru2.toString() === 'true')">
                                         <template v-slot:label>
-                                            <div style="font-size: 1em;">ランクアップ1</div>
+                                            <div style="font-size: 1em;">{{$t('$phase')}} 1</div>
                                         </template>
                                     </v-checkbox>
                                     <v-checkbox color="indigo-lighten-1" v-model="p.item.raw.condition.ru2" @input="reCalc(p.item.raw)"
                                         :disabled="!(p.item.raw.condition.ru1.toString() === 'true') || (p.item.raw.condition.ru3.toString() === 'true')">
                                         <template v-slot:label>
-                                            <div style="font-size: 1em;">ランクアップ2</div>
+                                            <div style="font-size: 1em;">{{$t('$phase')}} 2</div>
                                         </template>
                                     </v-checkbox>
                                     <v-checkbox color="indigo-lighten-1" v-model="p.item.raw.condition.ru3" @input="reCalc(p.item.raw)"
                                         :disabled="!(p.item.raw.condition.ru2.toString() === 'true' && p.item.raw.condition.ru1.toString() === 'true')">
                                         <template v-slot:label>
-                                            <div style="font-size: 1em;">ランクアップ3</div>
+                                            <div style="font-size: 1em;">{{$t('$phase')}} 3</div>
                                         </template>
                                     </v-checkbox>
                                 </div>
                             </v-col>
                             <v-col>
                                 <div style="position: relative; top: -18px">
-                                    <span style="font-size: 13px; position: relative; top:20px; z-index: 10;">通常攻撃</span>
+                                    <span style="font-size: 13px; position: relative; top:20px; z-index: 10;">{{ $t('$normalAttack') }}</span>
                                     <div class="d-flex flex-frow ma-0 pa-0">
                                         <v-select class="py-0" hide-details hide-no-data :items="[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" v-model="p.item.raw.condition.slv[0]"
                                             @update:modelValue="reCalc(p.item.raw)" label="" bg-color="grey-darken-4" variant="underlined"></v-select>
@@ -74,7 +74,7 @@
                                     </div>
                                 </div>
                                 <div style="position: relative; top: -18px">
-                                    <span style="font-size: 13px; position: relative; top:20px; z-index: 10;">必殺</span>
+                                    <span style="font-size: 13px; position: relative; top:20px; z-index: 10;">{{ $t('$ultimate') }}</span>
                                     <div class="d-flex flex-frow ma-0 pa-0">
                                         <v-select class="py-0" hide-details hide-no-data :items="[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" v-model="p.item.raw.condition.slv[1]"
                                             @update:modelValue="reCalc(p.item.raw)" label="" bg-color="grey-darken-4" variant="underlined"></v-select>
@@ -86,7 +86,7 @@
                                     </div>
                                 </div>
                                 <div style="position: relative; top: -18px">
-                                    <span style="font-size: 13px; position: relative; top:20px; z-index: 10;">パッシブ1</span>
+                                    <span style="font-size: 13px; position: relative; top:20px; z-index: 10;">{{ $t('$passive') }}1</span>
                                     <div class="d-flex flex-frow ma-0 pa-0">
                                         <v-select class="py-0" hide-details hide-no-data :items="[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" v-model="p.item.raw.condition.slv[2]"
                                             @update:modelValue="reCalc(p.item.raw)" label="" bg-color="grey-darken-4" variant="underlined"></v-select>
@@ -98,7 +98,7 @@
                                     </div>
                                 </div>
                                 <div style="position: relative; top: -18px">
-                                    <span style="font-size: 13px; position: relative; top:20px; z-index: 10;">パッシブ2</span>
+                                    <span style="font-size: 13px; position: relative; top:20px; z-index: 10;">{{ $t('$passive') }}2</span>
                                     <div class="d-flex flex-frow ma-0 pa-0">
                                         <v-select class="py-0" hide-details hide-no-data :items="[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" v-model="p.item.raw.condition.slv[3]"
                                             @update:modelValue="reCalc(p.item.raw)" label="" bg-color="grey-darken-4" variant="underlined"></v-select>

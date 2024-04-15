@@ -1,10 +1,19 @@
 import messages from './locales/messages'
 
 export default defineI18nConfig(() => ({
+
     legacy: false,
-    locale:"ja",
+    locales: [{code:'ja',iso:'ja_JP'},{code:'en',iso:'en-US'},{code:'zh',iso:'zh-CN'}],
+    locale: "ja",
     defaultLocale: "ja",
-    locales: ['ja','en','zh'],
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+    },
+    strategy: 'no_prefix',
+    lazy: true,
     fallbackLocale :'en',
+    silentFallbackWarn: true,
+    silentTranslationWarn: true,
     messages
   }))

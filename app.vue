@@ -15,32 +15,32 @@
         <v-window-item value="Main" transition="scroll-x">
           <v-container fluid class="bg-grey-darken-3">
             <v-row>
-              <v-btn width="100px" height="40px" color="#000000" disabled rounded="0" class="my-2 mr-3" text="検索"></v-btn>
+              <v-btn width="100px" height="40px" color="#000000" disabled rounded="0" class="my-2 mr-3" :text="$t('$search')"></v-btn>
               <Searchbar style="position: relative; top:-6px"></Searchbar>
             </v-row>
             <v-row>
-              <v-btn width="100px" height="40px" color="#000000" disabled rounded="0" class="my-2 mr-3" text="フィルタ"></v-btn>
-              <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('ディスコイン')" :class="{ 'active': isSelected('ディスコイン') }">ディスコイン</v-btn>
-              <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('箱')" :class="{ 'active': isSelected('箱') }">箱</v-btn>
-              <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('モジュール')" :class="{ 'active': isSelected('モジュール') }">モジュール</v-btn>
-              <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('原素')" :class="{ 'active': isSelected('原素') }">原素</v-btn>
-              <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('コア')" :class="{ 'active': isSelected('コア') }">コア</v-btn>
-              <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('内海')" :class="{ 'active': isSelected('内海') }">内海</v-btn>
-              <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleRequiredMaterials()" :class="{ 'active': materialstore.showRequiredMaterials }">不要素材</v-btn>
+              <v-btn width="100px" height="40px" color="#000000" disabled rounded="0" class="my-2 mr-3" :text="$t('$filter')"></v-btn>
+              <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('ディスコイン')" :class="{ 'active': isSelected('ディスコイン') }">{{$t('ディスコイン')}}</v-btn>
+              <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('箱')" :class="{ 'active': isSelected('箱') }">{{$t('箱')}}</v-btn>
+              <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('モジュール')" :class="{ 'active': isSelected('モジュール') }">{{$t('モジュール')}}</v-btn>
+              <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('原素')" :class="{ 'active': isSelected('原素') }">{{$t('原素')}}</v-btn>
+              <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('コア')" :class="{ 'active': isSelected('コア') }">{{$t('コア')}}</v-btn>
+              <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleCategory('内海')" :class="{ 'active': isSelected('内海') }">{{$t('内海')}}</v-btn>
+              <v-btn class="mx-1 mt-3 bg-indigo" @click="toggleRequiredMaterials()" :class="{ 'active': materialstore.showRequiredMaterials }">{{$t('不要素材')}}</v-btn>
             </v-row>
             <v-row>
-              <v-btn height="40px" width="100px" color="#000000" disabled rounded="0" class="my-2 mr-3" text="オプション"></v-btn>
-              <v-tooltip bottom text="素材の所持数をリセットします" location="bottom">
+              <v-btn height="40px" width="100px" color="#000000" disabled rounded="0" class="my-2 mr-3" :text="$t('$options')"></v-btn>
+              <v-tooltip bottom :text="$t('$resetOwnedDesc')" location="bottom">
                 <template v-slot:activator="{ props }">
-                  <VBtn width="140px" height="40px" dark v-bind="props" class="bg-red-darken-2 my-2 mx-1 pa-2" @click="ownreset()" text="所持数のリセット"></VBtn>
+                  <VBtn width="140px" height="40px" dark v-bind="props" class="bg-red-darken-2 my-2 mx-1 pa-2" @click="ownreset()" :text="$t('$resetOwned')"></VBtn>
                 </template>
               </v-tooltip>
-              <v-tooltip bottom text="素材の必要数と選択コンビクトをリセットします" location="bottom">
+              <v-tooltip bottom :text="$t('$resetNeededDesc')" location="bottom">
                 <template v-slot:activator="{ props }">
-                  <VBtn width="140px" height="40px" dark v-bind="props" class="bg-red-darken-2 my-2 mx-1 pa-2" @click="needreset()" text="必要数のリセット"></VBtn>
+                  <VBtn width="140px" height="40px" dark v-bind="props" class="bg-red-darken-2 my-2 mx-1 pa-2" @click="needreset()" :text="$t('$resetNeeded')"></VBtn>
                 </template>
               </v-tooltip>
-              <v-switch color="indigo-accent-2" v-model="materialstore.hideEnoughMaterials" hide-details class="my-0 mx-5 pa-0" label="収集済み素材を半透明に"></v-switch>
+              <v-switch color="indigo-accent-2" v-model="materialstore.hideEnoughMaterials" hide-details class="my-0 mx-5 pa-0" :label="$t('$enoughMaterials')"></v-switch>
             </v-row>
           </v-container>
           <v-container class="d-flex flex-wrap align-content-start justify-start">
@@ -62,11 +62,12 @@ import { useCharacterStore } from '@/store/characters';
 import { useMaterialStore } from '@/store/material';
 import { useDisplay } from "vuetify";
 import type { Character, Characters, ChJsonData, Condition, Material } from '~/types/types';
-const { locale, setLocale } = useI18n();
+const { setLocale } = useI18n();
 const display = useDisplay();
 const materialstore = useMaterialStore();
-var tab:any = ref(null);
-
+var tab: any = ref(null);
+const CookieLocale = useCookie('i18n_redirected');
+if (CookieLocale.value) setLocale(CookieLocale.value);
 
 if (Object.keys(materialstore.categories).length === 0) {
   await materialstore.init();
@@ -350,13 +351,6 @@ const filteredMaterials = computed(() => {
     materials = materials.filter((material: Material) => Number(material.required) >= 1 || material.category == "箱");
   }
   return materials;
-
-  //const filterdCategory = Object.fromEntries(
-  //  Object.entries(materialstore.categories).filter(([key]) => !materialstore.selectedCategories.includes(key))
-  //);
-  //const filterd = Object.values(filterdCategory).flat();
-  //return filterd;
-  //
 });
 const isSelected = (category: string) => {
   return materialstore.selectedCategories.includes(category);
