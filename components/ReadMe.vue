@@ -54,6 +54,7 @@ wiki\n
 This project is inspired by [arkntools/arknights-toolbox](https://github.com/arkntools/arknights-toolbox)
 
 # 更新履歴
+2024-05-05 軽微なバグ修正。\n
 2024-04-15 英語表示対応。他細かいアップデート。\n
 2024-04-15 コンビクト一覧を追加。 \n
 2024-04-10 データ更新処理の変更。自動スケジュール化。\n

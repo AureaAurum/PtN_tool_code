@@ -133,7 +133,7 @@
 <script setup lang="ts">
 const p = defineProps<{ item: any; }>();
 const nID: number = p.item.raw.naikai == "囁き" ? 0 : p.item.raw.naikai == "亡骸" ? 1 : p.item.raw.naikai == "狂念" ? 2 : -1;
-const show = nID < 0 ? false : true;
+const show = nID >= 0 ? true : false;
 import type { Character, Characters, ChJsonData, Condition, Material } from '~/types/types';
 import { useMaterialStore } from '@/store/material';
 import { useCharacterStore } from '@/store/characters';

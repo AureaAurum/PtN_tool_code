@@ -91,8 +91,8 @@
     </template>
     <template v-slot:item.naikai="{ item }">
       <v-tooltip bottom :text="`${$t(item.raw.naikai)}`" location="bottom">
-        <template v-slot:activator="{ props }" v-if="show(naikai(item.raw.naikai))">
-          <v-img v-bind="props" :src="'/img/materials/' + materialstore.categories['内海'][naikai(item.raw.naikai)].id + '.png'" aspect-ratio="1" height="60px" width="60px"></v-img>
+        <template v-slot:activator="{ props }" v-if="show(nID(item.raw.naikai))">
+          <v-img v-bind="props" :src="'/img/materials/' + materialstore.categories['内海'][nID(item.raw.naikai)].id + '.png'" aspect-ratio="1" height="60px" width="60px"></v-img>
         </template>
       </v-tooltip>
     </template>
@@ -125,13 +125,11 @@ const SUMValue = ref('');
 
 const NaikaiValue = ref('');
 const naikainame: string[] = ['', '囁き', '亡骸', '狂念'];
-const naikai = (naikai: string) => {
+const nID = (naikai: string) => {
   const nID: number = naikai == '囁き' ? 0 : naikai == '亡骸' ? 1 : naikai == '狂念' ? 2 : -1;
   return nID;
 };
-const show = (id: number) => {
-  return id !== -1;
-};
+const show = (id: number) => id >= 0 ? true: false;
 
 const headers: any = [
   {
