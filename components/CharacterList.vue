@@ -91,8 +91,8 @@
     </template>
     <template v-slot:item.naikai="{ item }">
       <v-tooltip bottom :text="`${$t(item.raw.naikai)}`" location="bottom">
-        <template v-slot:activator="{ props }" v-if="show(nID(item.raw.naikai))">
-          <v-img v-bind="props" :src="'/img/materials/' + materialstore.categories['内海'][nID(item.raw.naikai)].id + '.png'" aspect-ratio="1" height="60px" width="60px"></v-img>
+        <template v-slot:activator="{ props }">
+          <v-img v-if="show(nID(item.raw.naikai))" v-bind="props" :src="'/img/materials/' + materialstore.categories['内海'][nID(item.raw.naikai)].id + '.png'" aspect-ratio="1" height="60px" width="60px"></v-img>
         </template>
       </v-tooltip>
     </template>
