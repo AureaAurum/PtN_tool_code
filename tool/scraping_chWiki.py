@@ -134,18 +134,15 @@ if  any(characters):
     with open(zhpath, 'w', encoding='UTF-8') as f:
         json.dump(zhlocale, f, indent=2, ensure_ascii=False)
 
-with open(currentdir / r'./translate.yaml', encoding='utf-8') as readYaml:
-    yaml = yaml.load(readYaml, Loader=yaml.Loader)
 
-with open(currentdir / r'../public/json/characters.json',"rt", encoding='utf-8') as readParameter:
-    parameter = readParameter.read()
-
-with open(currentdir / r'../public/json/characters.json',"wt", encoding='utf-8') as writeParameter:
-    #print(parameter.encode('utf-8'))
-
-    for item in yaml['replace']:
-        print(f"index:{item['index']} before:{item['before']} after:{item['after']}")
-        #parameter = parameter.replace(str(item['before']),str(item['after']))
-        parameter = re.sub(str(item['before']+'(?![\u4E00-\u9FFF])'),str(item['after']),parameter)
-#    print(parameter.encode('utf-8'))
-    writeParameter.write(parameter)
+    with open(currentdir / r'./translate.yaml', encoding='utf-8') as readYaml:
+        yaml = yaml.load(readYaml, Loader=yaml.Loader)
+    with open(currentdir / r'../public/json/characters.json',"rt", encoding='utf-8') as readParameter:
+        parameter = readParameter.read()
+    with open(currentdir / r'../public/json/characters.json',"wt", encoding='utf-8') as writeParameter:
+        #print(parameter.encode('utf-8'))
+        for item in yaml['replace']:
+            print(f"index:{item['index']} before:{item['before']} after:{item['after']}")
+            #parameter = parameter.replace(str(item['before']),str(item['after']))
+            parameter = re.sub(str(item['before']+'(?![\u4E00-\u9FFF])'),str(item['after']),parameter)
+        writeParameter.write(parameter)
