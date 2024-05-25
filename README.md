@@ -10,6 +10,9 @@
 ディスコインはランクアップ、スキルレベルアップに必要な分のみの計算となっています。レベルアップに別途ディスコインが必要です。  
 挙動が変でしたらお手数ですが当サイトのキャッシュ・データ削除をお試しください。
 
+## 連絡先
+[GitHub](https://github.com/AureaAurum/PtN_tool_code) [X(旧Twitter)](https://twitter.com/Aurea_Aurum) [マシュマロ](https://marshmallow-qa.com/1lhdgcbb5qqm1yg)
+
 ## 謝辞
 wiki
 - JP [無期迷途 日本語wiki](https://wikiwiki.jp/ptn/)
@@ -18,7 +21,6 @@ wiki
 This project is inspired by [arkntools/arknights-toolbox](https://github.com/arkntools/arknights-toolbox)
 
 ## License
-
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details
 
 # 更新履歴
