@@ -22,6 +22,7 @@ This project is inspired by [arkntools/arknights-toolbox](https://github.com/ark
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details
 
 # 更新履歴
+2024-05-25 コンビクトは各職業 > レアリティ > アルファベットの順で並ぶようになりました。  
 2024-05-05 軽微なバグ修正。  
 2024-04-15 英語表示対応。他細かいアップデート。  
 2024-04-15 コンビクト一覧を追加。  

@@ -30,7 +30,34 @@ import { useI18n, useLocalePath } from '#imports'
 const { t } = useI18n()
 
 const characters = useCharacterStore();
-const items = Object.values(characters.data);
+const items: Character[] = Object.values(characters.data);
+const sinOrder:{[key: string]: number } = {
+  "エンデュア": 1,
+  "フューリー": 2,
+  "アンブラ": 3,
+  "レチクル": 4,
+  "アーケイン": 5,
+  "カタリシス": 6,
+};
+
+const rarityOrder:{[key: string]: number } = {
+  "S": 1,
+  "A": 2,
+  "B": 3,
+};
+
+items.sort((a, b) => {
+  const sinResult = sinOrder[a.sin] - sinOrder[b.sin];
+  if (sinResult !== 0) {
+    return sinResult;
+  }
+  const rareResult = rarityOrder[a.rarity] - rarityOrder[b.rarity];
+  if (rareResult !== 0){
+    return rareResult;
+  }
+  return a.name.localeCompare(b.name);
+});
+
 function customfilter(itemTitle: string, queryText: string, item: any) {
   const jName = hiraganaToKatakana(t(item.raw.name));
   const searchText = hiraganaToKatakana(queryText);
