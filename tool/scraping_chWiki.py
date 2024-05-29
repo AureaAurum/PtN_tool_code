@@ -74,7 +74,7 @@ if resp_tabs_container:
                         missing.append(title)
                         continue
                     naikai = target_element.select("table:nth-child(2)>tbody>tr:nth-child(8)>td>a")[2].get_text(strip=True)
-                    condition = {"level":1,"ru1":"false","ru2":"false","ru3":"false","slv":[1,1,1,1],"target_slv": [10, 10, 10, 10]}
+                    condition = {"level":1,"target_level":90,"ru1":"false","ru2":"false","ru3":"false","slv":[1,1,1,1],"target_slv": [10, 10, 10, 10]}
                     character = {"rarity":rarity,"name":english,"ename":english, "sin":sin, "rankup_material1":rankup_material1,"rankup_material2":rankup_material2,"skill_material":skill_material, "naikai":naikai,"condition":condition}
                     characters[english] = character
                     en[english] = english

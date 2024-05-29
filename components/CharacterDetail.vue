@@ -13,6 +13,11 @@
                     </v-avatar>
                     <div class="my-2 mx-4 me-auto">{{ $t(p.item.raw.name) }}</div>
                     <div class="d-flex my-2">
+                        <v-tooltip bottom :text="`${ $t(p.item.raw.sin) }`" location="bottom">
+                            <template v-slot:activator="{ props }">
+                                <v-img v-bind="props" :src="'/img/materials/' + materialstore.categories[p.item.raw.sin + '原素'][2].id + '.png'" aspect-ratio="1" height="30px" width="30px"></v-img>
+                            </template>
+                        </v-tooltip>
                         <v-tooltip bottom :text="`${$t('$tableHeaderRUM1')}:${ $t(p.item.raw.rankup_material1) }`" location="bottom">
                             <template v-slot:activator="{ props }">
                                 <v-img v-bind="props" :src="'/img/materials/' + materialstore.categories[p.item.raw.rankup_material1][3].id + '.png'" aspect-ratio="1" height="30px" width="30px"></v-img>
@@ -39,6 +44,18 @@
                     <v-container class="pa-o">
                         <v-row>
                             <v-col>
+                                <div style="position: relative; top: -18px">
+                                    <span style="font-size: 13px; position: relative; top:20px; z-index: 10;">{{ $t('$Level') }}</span>
+                                    <div class="d-flex flex-frow ma-0 pa-0">
+                                        <v-text-field type="number" class="py-0" hide-details hide-no-data v-model="p.item.raw.condition.level"
+                                            @update:modelValue="reCalc(p.item.raw)" label="" bg-color="grey-darken-4" variant="underlined"></v-text-field>
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-4 -12 32 32">
+                                            <path :d="mdiArrowRight" stroke="white" fill="white"></path>
+                                        </svg>
+                                        <v-text-field type="number" hide-details hide-no-data v-model="p.item.raw.condition.target_level" @update:modelValue="reCalc(p.item.raw)"
+                                            label="" bg-color="grey-darken-4" variant="underlined"></v-text-field>
+                                    </div>
+                                </div>
                                 <div>
                                     <span style="font-size: 10px;">{{$t('$checkoff')}}</span>
                                     <v-checkbox color="indigo-lighten-1" v-model="p.item.raw.condition.ru1" @input="reCalc(p.item.raw)" :disabled="(p.item.raw.condition.ru2.toString() === 'true')">
@@ -152,5 +169,6 @@ function reCalc(item: Character) {
     characters.selected.push(item);
     console.log(item);
 }
+
 </script>
 

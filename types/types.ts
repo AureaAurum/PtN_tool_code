@@ -14,6 +14,7 @@ export interface Categories {
 
 export interface Condition {
   level: number;
+  target_level: number;
   ru1: string;
   ru2: string;
   ru3: string;

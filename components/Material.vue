@@ -57,6 +57,7 @@ const color = computed(() => {
     opacity = 0.1;
   }
   var fsize = props.mat.name == "ディスコイン" ? "12px" : "14px";
+  var fsize = props.mat.name == "ルナティックエッセンス" ? "12px" : "14px";
 
   return { '--bcolor': bcolor, '--opacity': opacity, '--fsize': fsize };
 });
@@ -64,7 +65,7 @@ const color = computed(() => {
 const name = computed(() => {
   const length = t(props.mat.name).length;
   const maxlength = locale.value == "en" ? 15 : 9;
-  var namefont = length > maxlength ? "9px" : "12px";
+  var namefont = length > maxlength ? "8.5px" : "12px";
   var wrap = length > maxlength ? "wrap" : "nowrap";
   return { '--namefont': namefont, '--wrap': wrap};
 });
