@@ -170,5 +170,28 @@ function reCalc(item: Character) {
     console.log(item);
 }
 
+
+//watch(p.item.raw, (v)=>{
+//    if (p.item.raw.condition.level < 21) {
+//        p.item.raw.condition.ru1 = false;
+//    }
+//    if (p.item.raw.condition.level >= 21) {
+//        p.item.raw.condition.ru1 = true;
+//    }
+//    if (p.item.raw.condition.level < 41) {
+//        p.item.raw.condition.ru2 = false;
+//    }
+//    if (p.item.raw.condition.level >= 41) {
+//        p.item.raw.condition.ru2 = true;
+//    }
+//    if (p.item.raw.condition.level < 71) {
+//        p.item.raw.condition.ru3 = false;
+//    }
+//    if (p.item.raw.condition.level >= 71) {
+//        p.item.raw.condition.ru3 = true;
+//    }
+//    reCalc(p.item.raw);
+//})
+
 </script>
 
