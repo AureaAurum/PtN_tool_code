@@ -35,10 +35,23 @@ def download_image(url, file_path):
       f.write(r.content)
 
 # 既存のキャラクターデータを読み込み
+path = currentdir / r'../public/json/characters.json'
 existing_titles = []
+uncompleted_titles = []
+zhpath = currentdir / r'../locales/zh/zh_characters.json'
+zhlocale = {}
+
+with open(zhpath, 'r', encoding='UTF-8') as f:
+    zhlocale = json.load(f)
 with open(currentdir / '../locales/zh/zh_characters.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
     existing_titles = list(data.values())
+with open(path, "r", encoding="utf-8") as f:
+    c = json.load(f)
+    for name, stats in c["Characters"].items():
+        if stats.get("naikai") not in ("狂念", "囁き", "亡骸"):
+            uncompleted_titles.append(zhlocale[name])
+print(f"uncompleted:{uncompleted_titles}")
 
 # resp-tabs-container内のclassがtxzの要素を取得
 if resp_tabs_container:
@@ -52,7 +65,7 @@ if resp_tabs_container:
             url = "https://wiki.biligame.com/" + href
             title = a_element.find('span').text
             # 既存のキャラクターデータに存在しない場合のみスクレイピング
-            if title not in existing_titles:
+            if title not in existing_titles or title in uncompleted_titles:
                 response = requests.get(url)
 
                 # ページのコンテンツをBeautiful Soupで解析
@@ -90,7 +103,7 @@ if resp_tabs_container:
                     print(f"{title}, {english} が見つかりませんでした。")
                     missing.append(title)
                 time.sleep(2)
-    print(f"missing: {missing}")
+    print(f"missing: {missing}, found: {list(characters.keys())}")
 else:
     print("指定されたクラスが見つかりませんでした。")
 
@@ -103,7 +116,6 @@ if  any(characters):
     # 現在の日付と時刻を文字列に変換
     current_datetime_str = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
     chjson = {}
-    path = currentdir / r'../public/json/characters.json'
     try:
         with open(path, 'r', encoding='UTF-8') as f:
             read_data = json.load(f)
@@ -142,7 +154,7 @@ if  any(characters):
     with open(currentdir / r'../public/json/characters.json',"wt", encoding='utf-8') as writeParameter:
         #print(parameter.encode('utf-8'))
         for item in yaml['replace']:
-            print(f"index:{item['index']} before:{item['before']} after:{item['after']}")
+            #print(f"index:{item['index']} before:{item['before']} after:{item['after']}")
             #parameter = parameter.replace(str(item['before']),str(item['after']))
             parameter = re.sub(str(item['before']+'(?![\u4E00-\u9FFF])'),str(item['after']),parameter)
         writeParameter.write(parameter)
