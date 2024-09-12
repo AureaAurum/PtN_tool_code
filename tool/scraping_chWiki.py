@@ -55,7 +55,7 @@ print(f"uncompleted:{uncompleted_titles}")
 
 # resp-tabs-container内のclassがtxdの要素を取得
 if resp_tabs_container:
-    txd_elements = resp_tabs_container.find_all(class_='txz')
+    txd_elements = resp_tabs_container.find_all(class_='txd')
     missing = []
     if not txd_elements:
         raise ValueError("wikiの仕様変更の可能性あり")
