@@ -55,8 +55,10 @@ print(f"uncompleted:{uncompleted_titles}")
 
 # resp-tabs-container内のclassがtxdの要素を取得
 if resp_tabs_container:
-    txd_elements = resp_tabs_container.find_all(class_='txd')
+    txd_elements = resp_tabs_container.find_all(class_='txz')
     missing = []
+    if not txd_elements:
+        raise ValueError("wikiの仕様変更の可能性あり")
     # txd要素の下にあるa要素からhref属性とtitle属性を取得
     for txd_element in txd_elements:
         a_element = txd_element.find('a')
