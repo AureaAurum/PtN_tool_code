@@ -53,17 +53,17 @@ with open(path, "r", encoding="utf-8") as f:
             uncompleted_titles.append(zhlocale[name])
 print(f"uncompleted:{uncompleted_titles}")
 
-# resp-tabs-container内のclassがtxzの要素を取得
+# resp-tabs-container内のclassがtxdの要素を取得
 if resp_tabs_container:
-    txz_elements = resp_tabs_container.find_all(class_='txz')
+    txd_elements = resp_tabs_container.find_all(class_='txd')
     missing = []
-    # txz要素の下にあるa要素からhref属性とtitle属性を取得
-    for txz_element in txz_elements:
-        a_element = txz_element.find('a')
+    # txd要素の下にあるa要素からhref属性とtitle属性を取得
+    for txd_element in txd_elements:
+        a_element = txd_element.find('a')
         if a_element:
             href = a_element.get('href')
             url = "https://wiki.biligame.com/" + href
-            title = a_element.find('span').text
+            title = a_element.get('title')
             # 既存のキャラクターデータに存在しない場合のみスクレイピング
             if title not in existing_titles or title in uncompleted_titles:
                 response = requests.get(url)
@@ -87,6 +87,9 @@ if resp_tabs_container:
                         missing.append(title)
                         continue
                     naikai = target_element.select("table:nth-child(2)>tbody>tr:nth-child(8)>td>a")[2].get_text(strip=True)
+                    if naikai not in ("内海亡骸", "内海呓语", "内海狂念"):
+                        missing.append(title)
+                        continue
                     condition = {"level":1,"target_level":90,"ru1":"false","ru2":"false","ru3":"false","slv":[1,1,1,1],"target_slv": [10, 10, 10, 10]}
                     character = {"rarity":rarity,"name":english,"ename":english, "sin":sin, "rankup_material1":rankup_material1,"rankup_material2":rankup_material2,"skill_material":skill_material, "naikai":naikai,"condition":condition}
                     characters[english] = character
