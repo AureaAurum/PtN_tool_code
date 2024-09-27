@@ -91,7 +91,7 @@ if resp_tabs_container:
                     naikai = target_element.select("table:nth-child(2)>tbody>tr:nth-child(8)>td>a")[2].get_text(strip=True)
                     if naikai not in ("内海亡骸", "内海呓语", "内海狂念"):
                         missing.append(title)
-                        continue
+                        naikai = "dummy"
                     condition = {"level":1,"target_level":90,"ru1":"false","ru2":"false","ru3":"false","slv":[1,1,1,1],"target_slv": [10, 10, 10, 10]}
                     character = {"rarity":rarity,"name":english,"ename":english, "sin":sin, "rankup_material1":rankup_material1,"rankup_material2":rankup_material2,"skill_material":skill_material, "naikai":naikai,"condition":condition}
                     characters[english] = character
