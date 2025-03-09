@@ -64,11 +64,11 @@ if resp_tabs_container:
         a_element = txd_element.find('a')
         if a_element:
             href = a_element.get('href')
-            url = "https://wiki.biligame.com/" + href
+            character_url = "https://wiki.biligame.com/" + href
             title = a_element.get('title')
             # 既存のキャラクターデータに存在しない場合のみスクレイピング
             if title not in existing_titles or title in uncompleted_titles:
-                response = requests.get(url)
+                response = requests.get(character_url)
 
                 # ページのコンテンツをBeautiful Soupで解析
                 soup = BeautifulSoup(response.text, 'html.parser')
@@ -81,15 +81,16 @@ if resp_tabs_container:
                 if target_element and target_element2 and target_element3 and englishname:
                     english = englishname.get_text(strip=True)
                     rarity = target_element2.get_text(strip=True)
-                    sin = target_element.select("table:nth-child(1)>tbody>tr:nth-child(1)>td>a")[0].get_text(strip=True)
-                    rankup_material1 = target_element.select("table:nth-child(1)>tbody>tr:nth-child(1)>td>a")[1].get_text(strip=True)
-                    rankup_material2 = target_element.select("table:nth-child(1)>tbody>tr:nth-child(1)>td>a")[2].get_text(strip=True)
-                    skill_material = target_element.select("table:nth-child(2)>tbody>tr:nth-child(4)>td>a")[1].get_text(strip=True)
+                    materials = target_element.select("table:nth-child(1)>tbody>tr:nth-child(1)>td>div>a")
+                    sin = materials[0].get_text(strip=True)
+                    rankup_material1 = materials[1].get_text(strip=True)
+                    rankup_material2 = materials[2].get_text(strip=True)
+                    skill_material = target_element.select("table:nth-child(2)>tbody>tr:nth-child(4)>td>div>a")[1].get_text(strip=True)
                     if skill_material == "狄斯币" or rankup_material1 == "狄斯币" or rankup_material2 == "狄斯币":
                         missing.append(title)
                         print(f"{title} skipped")
                         continue
-                    naikai = target_element.select("table:nth-child(2)>tbody>tr:nth-child(8)>td>a")[2].get_text(strip=True)
+                    naikai = target_element.select("table:nth-child(2)>tbody>tr:nth-child(8)>td>>div>a")[2].get_text(strip=True)
                     if naikai not in ("内海亡骸", "内海呓语", "内海狂念"):
                         missing.append(title)
                         naikai = "dummy"
