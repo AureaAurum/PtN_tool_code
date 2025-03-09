@@ -82,17 +82,18 @@ if resp_tabs_container:
                     english = englishname.get_text(strip=True)
                     rarity = target_element2.get_text(strip=True)
                     materials = target_element.select("table:nth-child(1)>tbody>tr:nth-child(1)>td>div>a")
-                    sin = materials[0].get_text(strip=True)
-                    rankup_material1 = materials[1].get_text(strip=True)
-                    rankup_material2 = materials[2].get_text(strip=True)
-                    skill_material = target_element.select("table:nth-child(2)>tbody>tr:nth-child(4)>td>div>a")[1].get_text(strip=True)
+                    sin = materials[0]['title']
+                    rankup_material1 = materials[1]['title']
+                    rankup_material2 = materials[2]['title']
+                    skill_material = target_element.select("table:nth-child(2)>tbody>tr:nth-child(4)>td>div>a")[1]['title']
                     if skill_material == "狄斯币" or rankup_material1 == "狄斯币" or rankup_material2 == "狄斯币":
                         missing.append(title)
                         print(f"{title} skipped")
                         continue
-                    naikai = target_element.select("table:nth-child(2)>tbody>tr:nth-child(8)>td>div>a")[2].get_text(strip=True)
+                    naikai = target_element.select("table:nth-child(2)>tbody>tr:nth-child(8)>td>div>a")[2]['title']
                     if naikai not in ("内海亡骸", "内海呓语", "内海狂念"):
                         missing.append(title)
+                        print(f"{title} の内海が不正です。")
                         naikai = "dummy"
                     condition = {"level":1,"target_level":90,"ru1":"false","ru2":"false","ru3":"false","slv":[1,1,1,1],"target_slv": [10, 10, 10, 10]}
                     character = {"rarity":rarity,"name":english,"ename":english, "sin":sin, "rankup_material1":rankup_material1,"rankup_material2":rankup_material2,"skill_material":skill_material, "naikai":naikai,"condition":condition}
